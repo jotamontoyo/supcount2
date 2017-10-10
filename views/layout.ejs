@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Jose Juan Montoyo Coronati">
+	<title>Registros de mantenimiento</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/normalize.css"/>
+
+	<link rel="stylesheet" type="text/css" href="/stylesheets/pc.css"/>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/movil.css"/>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/tablet.css"/>
+
+	<link rel="stylesheet" type="text/css" href="/stylesheets/animate.css"/>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/sweetalert2.css"/>
+
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/holder.js"></script>
+	<script type="text/javascript" src="/js/transition.js"></script>
+	<script type="text/javascript" src="/js/cookies.js"></script>
+	<script type="text/javascript" src="/js/sweetalert2.min.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+
+
+
+	<!-- <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"> -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <!-- <link rel="stylesheet" href="/bower_components/Ionicons/css/ionicons.min.css"> -->
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="/dist/css/skins/_all-skins.min.css">
+    <!-- Morris chart -->
+    <!-- <link rel="stylesheet" href="/bower_components/morris.js/morris.css"> -->
+    <!-- jvectormap -->
+    <!-- <link rel="stylesheet" href="/bower_components/jvectormap/jquery-jvectormap.css"> -->
+    <!-- Date Picker -->
+    <!-- <link rel="stylesheet" href="/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css"> -->
+    <!-- Daterange picker -->
+    <!-- <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css"> -->
+    <!-- bootstrap wysihtml5 - text editor -->
+    <!-- <link rel="stylesheet" href="/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css"> -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+
+
+</head>
+
+
+
+
+
+<body class="hold-transition skin-blue sidebar-mini">
+
+
+	<script>
+		window.onload = function() {
+			var pos = window.name || 0;
+			window.scrollTo(0, pos);
+		};
+		window.onunload = function() {
+			window.name=self.pageYOffset || (document.documentElement.scrollTop+document.body.scrollTop);
+		};
+	</script>
+
+
+
+
+	<div class="wrapper" id="principal">
+
+		<header class="main-header">
+
+	    	<!-- Logo -->
+	    	<a href="#" class="logo">
+	      		<!-- mini logo for sidebar mini 50x50 pixels -->
+	      		<span class="logo-mini"><b>S</b>C</span>
+
+	      		<!-- logo for regular state and mobile devices -->
+	      		<span class="logo-lg"><b>Sup</b>Counter</span>
+	    	</a>
+
+			<!-- Header Navbar: style can be found in header.less -->
+	    	<nav class="navbar navbar-static-top">
+	      		<!-- Sidebar toggle button-->
+	      		<a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+	        		<span class="sr-only">Toggle navigation</span>
+	      		</a>
+	    	</nav>
+
+	  	</header>
+
+		<% if (session.user) {%>
+			<!-- Left side column. contains the logo and sidebar -->
+
+
+			<aside class="main-sidebar" id="menu">
+			    <!-- sidebar: style can be found in sidebar.less -->
+			    <section class="sidebar">
+
+
+		        	<!-- sidebar menu: : style can be found in sidebar.less -->
+			        <ul class="sidebar-menu" data-widget="tree">
+
+						<li class="header"></li>
+
+			        	<li class="">
+			            	<a href="/quizes">
+			              		<img src="/images/partes3.png" alt="" /><span> Lecturas</span>
+					          </a>
+			            	</a>
+			          	</li>
+
+			        	<li class="">
+			            	<a href="/contadores">
+			              		<img src="/images/contador2.png" alt="" /> <span> Contadores</span>
+					          </a>
+			            	</a>
+			          	</li>
+
+			        	<li class="">
+			            	<a href="/quizes/resumen_index">
+			              		<img src="/images/grifo.png" alt="" /> <span> Consumos</span>
+					          </a>
+			            	</a>
+			          	</li>
+
+			        	<li class="">
+			            	<a href="/siloes">
+			              		<img src="/images/probetas.png" alt="" /> <span> Ensayos</span>
+					          </a>
+			            	</a>
+			          	</li>
+
+			        	<li class="">
+			            	<a href="/vasos">
+			              		<img src="/images/vasos.png" alt="" /> <span> Vasos</span>
+					          </a>
+			            	</a>
+			          	</li>
+
+
+				        <li class="treeview">
+				            <a href="#">
+				            	<img src="/images/consumos2.png" alt="" />
+				              	<span> Siloes</span>
+								<span class="pull-right-container">
+					            	<i class="fa fa-angle-left pull-right"></i>
+					            </span>
+				            </a>
+				            <ul class="treeview-menu">
+				            	<li><a href="/siloes/resumen_index_vaso"><img src="/images/vasos.png" alt="" /> Vaso</a></li>
+				              	<li><a href="/siloes/resumen_index"><img src="/images/excel.png" alt="" /> Excel</a></li>
+				            </ul>
+				        </li>
+
+
+						<li class="">
+			            	<a href="/user">
+			              		<img src="/images/user.png" alt="" /> <span> Usuarios</span>
+					          </a>
+			            	</a>
+			          	</li>
+
+						<% if (session.user) {
+							if (session.user.isSuperAdmin) {%>
+								<li class="">
+					            	<a href="/centros">
+					              		<img src="/images/centros.png" alt="" /> <span> Centros</span>
+							          </a>
+					            	</a>
+					          	</li>
+								<li class="">
+					            	<a href="/contactos">
+					              		<img src="/images/contacts.png" alt="" /> <span> Contactos</span>
+							          </a>
+					            	</a>
+					          	</li>
+							<%}%>
+						<%}%>
+
+						<%if (session.user) {%>
+							<li class="header"></li>
+					        <li><a href="/logout"><i class="fa fa-circle-o text-red"></i> <span> Salir</span></a></li>
+					        <!-- <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
+					        <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li> -->
+						<%}%>
+
+					</ul>
+
+		      	</section>
+		      <!-- /.sidebar -->
+		    </aside>
+
+	  	<%}%>
+
+		<!-- Content Wrapper. Contains page content -->
+		<div class="content-wrapper">
+
+		    <!-- Content Header (Page header) -->
+		    <!-- <section class="content-header">
+		    	<h1>
+		        	Dashboard
+		        	<small>Control panel</small>
+		      	</h1>
+		      	<ol class="breadcrumb">
+		        	<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+		        	<li class="active">Dashboard</li>
+		      	</ol>
+		    </section> -->
+
+
+		    <!-- Main content -->
+		    <section class="content">
+		      	<div class="row">
+					<div class="container-fluid">
+				  		<% if (errors.length) {%>
+	  						<span id='ErrorMsgs'>Corregir errores:<br/>
+	  							<% for (var i in errors) {%>
+	  								<span> <%= errors[i].message %> </span><br/>
+	  							<%}%>
+	  						</span>
+	  					<%}%>
+	  					<%- body %>
+					</div>
+	        	</div>
+	    	</section>
+
+	  	</div>
+
+
+
+		<!-- /.content-wrapper -->
+		<footer class="main-footer text-center">
+		    <h6>&copy; 2017 cosilsCompany, Inc.
+				&nbsp;
+				&middot;
+				&nbsp;
+				<a
+					data-toggle="modal"
+					data-target="#lopd-modal">Política de privacidad
+				</a>
+				&nbsp;
+				&middot;
+				&nbsp;
+				<a
+					data-toggle="modal"
+					data-target="#cookies-modal">Política de cookies
+				</a>
+				&nbsp;
+				&middot;
+				&nbsp;
+				Patrocinado por: <a href="http://www.piscinas7islas.com/" target="_blank"></a>
+			</h6>
+		</footer>
+
+
+
+
+	</div>
+
+	<script>
+		$.widget.bridge('uibutton', $.ui.button);
+	</script>
+
+	<!-- FastClick -->
+	<script src="/bower_components/fastclick/lib/fastclick.js"></script>
+	<!-- AdminLTE App -->
+	<script src="/dist/js/adminlte.min.js"></script>
+	<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+	<script src="/dist/js/pages/dashboard.js"></script>
+	<!-- AdminLTE for demo purposes -->
+	<script src="/dist/js/demo.js"></script>
+
+
+
+
+
+	<!-- BOTON SUBIR =================================================================================== -->
+
+	<div class="row center-block animated fadeIn" id="subir-inicio">
+		<nav role="navigation"><a href="#principal"><i class="fa fa-arrow-circle-up fa-2x" id="subir-inicio-icon"></i></a></nav>
+	</div>
+
+
+
+
+	<!-- MODAL ver mas ===================================================================================== -->
+	<div class="modal fade" id="ver-mas-modal" tabindex="-1" role="dialog" aria-labelledby="inicio" aria-hidden="true" style="padding-left: 0px">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<div class="modal-header text-center">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h2>SupCounter<span style="font-size: 15px;">&copy;</span></h2>
+
+				</div>
+
+				<div class="modal-body">
+<!-- 				<img class="img-responsive animated fadeIn" src="/images/marcas/mediterraneo-modal.jpg" alt="">
+					<div class="texto-modelo ocultar">
+						<img src="/images/logos/el-sol-mediterraneo.jpg" style="left: 0px;"></img>
+					</div>
+					<br> -->
+					<p>
+						SupCounter<span style="font-size: 9px;">&copy;</span> es una aplicación para la gestión administrativa de consumos procedentes de suministros externos o depósitos,
+						y de los resultados de los ensayos sobre aguas de pisicinas y vasos.
+						Su ámbito de aplicación es en todas aquellas instalaciones que consten de sistemas de distribución de agua, combustible o electricidad, y piscinas o depóstitos de agua sujetos a análisis por normativa.
+					</p>
+					<p>Permite obtener en tiempo inmediato los informes sobre consumos, generando avisos sobre posibles desvíos.</p>
+					<p>Genera los informes Siloé de cada vaso o pisicina sujetos a análisis por normativa, y ofrece la posibilidad de descargalos en el formato exigido por el Real Decreto 742/2013, de 27 de septiembre.</p>
+					<p>Desarrollado por:</p>
+					<p class="text-center">&copy; 2017 cosilsCompany, Inc. &middot;
+						<a
+							data-toggle="modal"
+							data-target="#lopd-modal">Política de privacidad &middot;
+						</a>
+						<a
+							data-toggle="modal"
+							data-target="#cookies-modal">Política de cookies
+						</a>
+
+					</p>
+					<p class="text-center">email: contacto@registrosdemantenimiento.com</p>
+				</div>
+
+<!--					<a id="acceso" href="/login"><img src="/images/user2.png" alt=""> Login&nbsp;</a> -->
+				<div class="modal-footer">
+					<button type="btn btn-small" class="btn btn-warning btn-xs" data-dismiss="modal">
+						Cerrar
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- MODAL POLITICA DE PRIVACIDAD ===================================================================================== -->
+	<div class="modal fade" id="lopd-modal" tabindex="-1" role="dialog" aria-labelledby="myLOPD" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title text-center" id="myLOPD">&copy; cosilsCompany, Inc.</h4>
+				</div>
+				<div class="modal-body">
+
+					<h3 class="text-center">Política de Privacidad</h3>
+					<br>
+					<p>A efectos de lo dispuesto en la normativa vigente en materia de protección de datos de carácter personal, mediante esta Política de Privacidad, <strong>&copy; cosilsCompany, Inc.</strong> (en adelante, “cosilsCompany” informa a los usuarios (en adelante, el “Usuario” o “Usuarios”) de su sitio Web <strong>https:registrosdemantenimiento.com</strong> (en adelante, el “Sitio Web”) acerca de su política de protección de los datos de carácter personal recogidos de los Usuarios del Sitio Web, para que éstos determinen libre y voluntariamente si desean facilitar a cosilsCompany los datos personales que se les puedan requerir o que se puedan obtener sobre los mismos con ocasión de su acceso y uso del Sitio Web.</p>
+
+					<p>Los únicos datos personales a los que cosilsCompany tendrá acceso a través del Sitio Web serán aquellos que el Usuario facilite voluntariamente, así como aquellos otros recogidos a través de las cookies instaladas y cuyas condiciones de uso puede consultar nuestra política de cookies.</p>
+
+					<p>En cumplimiento de la normativa vigente, cosilsCompany adopta las medidas técnicas y organizativas necesarias para mantener el nivel de seguridad requerido en atención a los datos personales tratados. Asimismo está dotado de los mecanismos precisos a su alcance para evitar en la medida de lo posible accesos no autorizados, sustracciones y modificaciones ilícitas y la pérdida de los datos.</p>
+
+					<p>Tratamiento de datos de carácter personal facilitados a través del Sitio Web.</p>
+
+					<p>De conformidad con la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal y el Real Decreto 1720/2007, de 21 de diciembre, por el que se aprueba el Reglamento de desarrollo de la Ley Orgánica 15/1999, cosilsCompany, con domicilio en Moralet, 137-A - 03699 Alicante, informa al Usuario que los datos que pueda facilitar a través del Sitio Web serán incorporados a un fichero automatizado de datos de carácter personal titularidad de cosilsCompany. Usted podrá consultar los tratamientos específicos que nuestra Compañía puede hacer con sus datos en cada uno de los apartados de nuestra web donde se recaben sus datos. Le recomendamos leer el contenido de las cláusulas de protección de datos que se incluyen en cada apartado a la hora de recabar sus datos. Con carácter general se tratarán sus datos con las siguientes finalidades:</p>
+					<ul>
+						<li>Contacto: Los datos recabados serán incorporados a un fichero (que podrá ser automatizado) responsabilidad de cosilsCompany, a los efectos de poder gestionar o en su caso, tener en cuenta y/o contestar a su consulta, comentario o sugerencia.</li>
+
+						<li>En todos los formularios de recogida de datos presentes en el Sitio Web, cosilsCompany facilita una casilla mediante la cual el Usuario podrá oponerse/negarse a la cesión indicada.</li>
+
+						<li>El consentimiento otorgado por el Usuario podrá ser revocado mediante notificación dirigida a la siguiente dirección de correo electrónico: contacto@registrosdemantenimiento.com o bien por correo ordinario dirigido a cosilsCompany, Moralet, 137-A - 03699 Alicante.</li>
+
+						<li>El Usuario se responsabiliza de la veracidad y exactitud de los datos personales comunicados, reservándose cosilsCompany el derecho a excluir de los servicios registrados a todo Usuario que haya facilitado datos falsos, sin perjuicio de las demás acciones que procedan en Derecho.</li>
+
+						<li>En cualquier caso, el Usuario podrá hacer efectivo el ejercicio de sus derechos de acceso, rectificación, cancelación y oposición, mediante e-mail dirigido a contacto@registrosdemantenimiento.com, así como mediante petición escrita dirigida a la dirección postal antes señalada.</li>
+
+						<li>Finalmente Ud. se compromete a comunicar a cosilsCompany cualquier modificación de los datos personales facilitados.</li>
+
+						<li>En caso de que el Usuario sea menor de 14 años, sus datos personales deben ser facilitados con autorización de su representante legal.</li>
+					</ul>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-warning btn-xs" data-dismiss="modal">Cerrar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- MODAL POLITICA DE COOKIES ===================================================================================== -->
+	<div class="modal fade" id="cookies-modal" tabindex="-1" role="dialog" aria-labelledby="myCookies" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title text-center" id="myCookies">&copy; 2017 cosilsCompany, Inc.</h4>
+				</div>
+				<div class="modal-body">
+
+					<h3 class="text-center">Política de Cookies</h3>
+					<br>
+					<p>Cookie es un fichero que se descarga en su ordenador al acceder a determinadas páginas web. Las cookies permiten a una página web, entre otras cosas, almacenar y recuperar información sobre los hábitos de navegación de un usuario o de su equipo y, dependiendo de la información que contengan y de la forma en que utilice su equipo, pueden utilizarse para reconocer al usuario. El navegador del usuario memoriza cookies en el disco duro solamente durante la sesión actual, 	ocupando un espacio de memoria mínimo y no perjudicando al ordenador. Las cookies no contienen ninguna clase de información personal específica, y la mayoría de las mismas se borran del disco duro al finalizar la sesión de navegador (las denominadas cookies de sesión).</p>
+
+					<p>La mayoría de los navegadores aceptan como estándar a las cookies y, con independencia de las mismas, permiten o impiden en los ajustes de seguridad las cookies temporales o memorizadas.</p>
+
+					<p>Sin su expreso consentimiento –mediante la activación de las cookies en su navegador– no enlazará en las cookies los datos memorizados con sus datos personales proporcionados en el momento del registro o la compra.</p>
+
+					<p><strong>¿Qué tipos de cookies utiliza esta página web?</strong></p>
+
+					<ul>
+						<li>Cookies técnicas: Son aquéllas que permiten al usuario la navegación a través de una página web, plataforma o aplicación y la utilización de las diferentes opciones o servicios que en ella existan como, por ejemplo, controlar el tráfico y la comunicación de datos, identificar la sesión, acceder a partes de acceso restringido, recordar los elementos que integran un pedido, realizar el proceso de compra de un pedido, realizar la solicitud de inscripción o participación en un evento, utilizar elementos de seguridad durante la navegación, almacenar contenidos para la difusión de videos o sonido o compartir contenidos a través de redes sociales.</li>
+
+						<li>Cookies de personalización: Son aquéllas que permiten al usuario acceder al servicio con algunas características de carácter general predefinidas en función de una serie de criterios en el terminal del usuario como por ejemplo serian el idioma, el tipo de navegador a través del cual accede al servicio, la configuración regional desde donde accede al servicio, etc...</li>
+
+						<li>Cookies de análisis: Son aquéllas que bien tratadas por nosotros o por terceros, nos permiten cuantificar el número de usuarios y así realizar la medición y análisis estadístico de la utilización que hacen los usuarios del servicio ofertado. Para ello se analiza su navegación en nuestra página web con el fin de mejorar la oferta de productos o servicios que le ofrecemos.</li>
+
+						<li>Cookies publicitarias: Son aquéllas que, bien tratadas por nosotros o por terceros, nos permiten gestionar de la forma más eficaz posible la oferta de los espacios publicitarios que hay en la página web, adecuando el contenido del anuncio al contenido del servicio solicitado o al uso que realice de nuestra página web. Para ello podemos analizar sus hábitos de navegación en Internet y podemos mostrarle publicidad relacionada con su perfil de navegación.</li>
+
+						<li>Cookies de publicidad comportamental: Son aquéllas que permiten la gestión, de la forma más eficaz posible, de los espacios publicitarios que, en su caso, el editor haya incluido en una página web, aplicación o plataforma desde la que presta el servicio solicitado. Estas cookies almacenan información del comportamiento de los usuarios obtenida a través de la observación continuada de sus hábitos de navegación, lo que permite desarrollar un perfil específico para mostrar publicidad en función del mismo.</li>
+					</ul>
+
+					<p><strong>Cookies de terceros:</strong> La Web de SupCounter puede utilizar servicios de terceros que, por cuenta de cosilsCompany, recopilarán información con fines estadísticos, de uso del Site por parte del usuario y para la prestacion de otros servicios relacionados con la actividad del Website y otros servicios de Internet.</p>
+
+					<p>En particular, este sitio Web utiliza Google Analytics, un servicio analítico de web prestado por Google, Inc. con domicilio en los Estados Unidos con sede central en 1600 Amphitheatre Parkway, Mountain View, California 94043.  Para la prestación de estos servicios, estos utilizan cookies que recopilan la información, incluida la dirección IP del usuario, que será transmitida, tratada y almacenada por Google en los términos fijados en la Web Google.com. Incluyendo la posible transmisión de dicha información a terceros por razones de exigencia legal o cuando dichos terceros procesen la información por cuenta de Google.</p>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-warning btn-xs" data-dismiss="modal">Cerrar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+
+</html>

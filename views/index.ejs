@@ -1,0 +1,321 @@
+
+
+	<div class="row alerta-cookies animated bounceInDown text-center">
+		<div class="alert alert-warning alert-dismissible alerta-panel" role="alert">
+<!--			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+			<p><strong>¡Uso de cookies!</strong> Este sitio web utiliza cookies para que usted tenga la mejor experiencia de usuario. Si continúa navegando está dando su consentimiento para la aceptación de las mencionadas cookies y la aceptación de nuestra política de cookies, pinche el enlace
+			<a 	data-toggle="modal"
+				data-target="#lopd-modal">
+				<span> política de privacidad</span>
+			</a>
+			para más información.
+			<button type="button" class="btn btn-success btn-sm" data-dismiss="alert" aria-label="Close">Aceptar</button></p>
+		</div>
+	</div>
+
+	
+
+
+	<div class="container-fluid animated fadeIn" id="inicio">
+
+<!--		<img src="/images/inicio/09.jpg" > -->
+
+		<div id="login_inicio">
+
+			<form class="form-horizontal" method='POST' action='/login' id="inicio_form">
+
+				<div class="form-group">
+
+						<div class="col-md-4 col-sm-4 col-xs-4 input-login-incio">
+							<div class="input-group">
+								<div class="input-group-addon"><i class="fa fa-user" /></i></div><input class="form-control" type="text" id="login" name="login"  placeholder=" usuario"/>
+							</div>
+						</div>
+
+						<div class="col-md-4 col-sm-4 col-xs-4 input-login-incio">
+							<div class="input-group">
+								<div class="input-group-addon"><i class="fa fa-key" /></i></div><input class="form-control" type="password" id="password" name="password" placeholder=" clave"/>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-smd-3 col-xs-1 input-login-incio">
+							<button class="btn btn-default btn-xs" type="submit"><i class="fa fa-check"></i></button>
+						</div>
+
+				</div>
+
+			</form>
+
+		</div>
+
+
+
+
+
+
+		<div id="inicio-panel">
+				<h1>Gestión de Contadores y Ensayos</h1>
+				<h1><%= title %><span style="font-size: 18px"> &copy;</span></h1>
+				<h3>Lecturas y consumos de suministros externos o depósitos</h3>
+				<h3>Ensayos de aguas de piscinas y vasos</h3>
+				<br>
+				<button class="btn btn-primary"
+					data-toggle="modal"
+					data-target="#ver-mas-modal">
+						<i class="fa fa-plus"></i> Info
+				</button>
+		</div>
+
+
+
+	</div>
+
+
+	<!-- SECCION 01 =================================================================================== -->
+
+	<div class="container-fluid animated animated-fast fadeIn" id="seccion_01">
+
+		<div class="row" id="seccion_01_items">
+
+			<div class="col-md-4 seccion_item">
+
+				<h3><img src="/images/seccion01/pc.png" alt=""></h3>
+
+				<h3>Sencilla</h3>
+
+				<p>Desarrollada para trabajo de campo. Una vez registradas las lecturas insitu no habrá más tareas administrativas adicionales.</p>
+
+			</div>
+
+		  	<div class="col-md-4 seccion_item">
+
+				<h3><img src="/images/seccion01/reloj.png" alt=""></h3>
+
+				<h3>Rápida</h3>
+
+				<p>Empiece hoy a gestionar sus consumos y análisis. Visualice los resultados o descarguelos en su equipo.</p>
+
+			</div>
+
+		  	<div class="col-md-4 seccion_item">
+
+				<h3><img src="/images/seccion01/calculadora.png" alt=""></h3>
+
+				<h3>Rentable</h3>
+
+				<p>Ahorre hasta el 80% del tiempo de sistemas tradicionales. Podrá reinvertir el tiempo ahorrado en tareas más productivas.</p>
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<!-- SECCION 02 =================================================================================== -->
+
+	<!-- <div class="container-fluid" id="seccion_02">
+
+
+
+		<h2 class="text-center">Así de fácil...</h2>
+
+		<div class="row" id="seccion_02_items">
+
+			<div class="col-md-3 seccion_item">
+
+				<h3><img src="/images/1.png" alt=""></h3>
+
+				<p><strong>Solicite una clave de prueba gratuita.</strong> Cumplimente el formulario de abajo sin nigún compromiso.</p>
+
+			</div>
+
+			<div class="col-md-3 seccion_item">
+
+				<h3><img src="/images/2.png" alt=""></h3>
+
+				<p><strong>Configure su instalación.</strong> Defina los contadores y piscinas.</p>
+
+			</div>
+
+		  	<div class="col-md-3 seccion_item">
+
+				<h3><img src="/images/3.png" alt=""></h3>
+
+				<p><strong>Dé de alta usuarios.</strong> Cada uno tendrá su propio ámbito de trabajo.</p>
+
+
+
+			</div>
+
+		  	<div class="col-md-3 seccion_item">
+
+				<h3><img src="/images/4.png" alt=""></h3>
+
+				<p><strong>Cree los partes de lecturas y de ensayos.</strong> Revise los consumos y sus posibles desvíos.</p>
+
+
+			</div>
+
+
+		</div>
+
+	</div> -->
+
+
+	<!-- PIE BANNER =================================================================================== -->
+
+	<!-- <div class="container-fluid" id="pie_banner">
+
+		<div class="container" id="pie_banner_contenedor">
+
+
+
+			<div class="row">
+
+				<div class="col-md-3" style="background-color:#2E2E2E">
+
+					<table>
+
+						<thead>
+
+								<th><h4>CONTACTO</h4></th>
+
+						</thead>
+
+						<tbody>
+							<tr>
+								<td><h5><i class="fa fa-industry"></i> &copy; 2017 cosilsCompany, Inc.</h5></td>
+							</tr>
+							<tr>
+								<td><h5><i class="fa fa-home"></i> Partida Moralet, 137-A - 03699 - Alicante</h5></td>
+							</tr>
+							<tr>
+								<td><h5><i class="fa fa-phone"></i> 0034658214679</h5></td>
+							</tr>
+							<tr>
+								<td><h5><i class="fa fa-envelope"></i> contacto@registrosdemantenimiento.com</h5></td>
+							</tr>
+						</tbody>
+
+
+					</table>
+
+
+
+
+				</div>
+
+
+
+
+
+				<div class="col-md-3">
+
+					<form class="form-horizontal" method="post" action="/contactos/webcreate" id="contacto_form">
+
+						<h4>CONTACTO</h4>
+						<br>
+
+						<div class="form-group">
+							<input type="text" class="form-control" id="nombre" name="nombre" required placeholder="Nombre"/>
+						</div>
+
+						<div class="form-group">
+							<input type="text" class="form-control" id="email" name="email" required placeholder="Email"/>
+						</div>
+
+						<div class="form-group">
+							<textarea class="form-control" id="comentario" name="comentario" rows="6" placeholder="Comentarios"></textarea>
+						</div>
+
+						<div class="form-group">
+							<div class="col-md-12 text-center" id="check_lopd">
+
+									<input type="checkbox" id="lopd" name="lopd" required> Acepto la
+										<a class="button"
+											data-toggle="modal"
+											data-target="#lopd-modal">
+											<span> política de privacidad</span>
+										</a>
+									</input>
+
+							</div>
+
+						</div>
+
+						<div class="form-group">
+							<div class="col-md-12 text-center">
+
+								<button class="btn btn-info btn-md" type="submit" id="grabar" value="Salvar">
+									<span class="glyphicon glyphicon-send" aria-hidden="true"></span> Solicitar clave
+								</button>
+							</div>
+						</div>
+
+					</form>
+
+				</div>
+
+
+
+				<div class="col-md-3">
+
+					<table>
+
+						<thead>
+
+								<th><h4>OTROS PROYECTOS</h4></th>
+
+						</thead>
+
+						<tbody>
+							<tr>
+								<td><h5><a data-toggle="modal" data-target="#poolcounter-modal">PoolCounter &copy;</a></h5></td>
+							</tr>
+							<tr>
+								<td><h5><a data-toggle="modal" data-target="#watercounter-modal">WaterCounter &copy;</a></h5></td>
+							</tr>
+						</tbody>
+
+
+					</table>
+
+
+
+
+				</div>
+
+				<div class="col-md-3">
+
+					<table>
+
+						<thead>
+
+								<th><h4></h4></th>
+
+						</thead>
+
+						<tbody>
+							<tr>
+								<td></td>
+							</tr>
+
+						</tbody>
+
+
+					</table>
+
+
+
+
+				</div>
+
+
+
+
+			</div>
+
+		</div>
+
+	</div> -->

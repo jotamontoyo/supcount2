@@ -1,0 +1,293 @@
+/* ========================================================================================================== */
+/* ========================================================================================================== */
+/* ========================================================================================================== */
+/* CONTROL FORMATO PANTALLA MOVIL =========================================================================== */
+/* ========================================================================================================== */
+/* ========================================================================================================== */
+/* ========================================================================================================== */
+
+
+@media handheld, only screen and (max-width: 767px) {			/* movil */
+
+
+    .avisos {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .ocultar_pc {
+
+        /*visibility: visible;*/
+        display: inline-block;
+
+    }
+
+    .ocultar_movil {
+
+        visibility: hidden;
+
+    }
+
+
+
+    /* ==== FORMATOS DE TEXTO ==============================================*/
+
+    .texto_tipo_1 {
+
+        color: #7fff00;                 /* verde claro */
+
+    }
+
+
+
+    /* ==== LAYOUT principal ==============================================*/
+
+    #principal {
+        margin-bottom: 10px;
+    }
+
+
+    /* INICIO =============================================================== */
+
+    #inicio {
+
+        min-height: 360px;
+
+    }
+
+    #inicio img{
+
+        min-height: 310px;
+
+    }
+
+
+    #inicio h1 {
+
+        font-size: 24px;
+    }
+
+    #inicio h3 {
+
+        font-size: 18px;
+    }
+
+
+
+
+    #login_inicio {
+
+
+
+        padding-left: 80px;
+
+    }
+
+
+
+
+
+    /* SECCION 01 =============================================================== */
+    /* SECCION 01 =============================================================== */
+    /* SECCION 01 =============================================================== */
+
+
+    #seccion_01 {
+
+		max-height: 100%;
+
+    }
+
+    #seccion_01_items {
+
+        margin-top: 25px;
+        margin-bottom: 0px;
+
+        margin-left: 20px;
+        margin-right: 20px;
+
+
+
+
+    }
+
+
+    .seccion_item {
+
+        margin-bottom: 25px;
+        padding-right: 10px;
+        padding-left: 10px;
+        padding-bottom: 10px;
+
+        border: 1px solid #E6E6E6;
+
+
+
+    	display: 			-webkit-flex;
+    	display: 			flex;
+    	-webkit-flex-direction: 	column;
+    	flex-direction: 			column;
+    	-webkit-justify-content: 	space-around;
+    	justify-content: 			space-around;
+
+    }
+
+    .seccion_item h3 {
+
+        margin-bottom: 10px;
+
+
+    }
+
+    .seccion_item p {
+
+        margin-bottom: 10px;
+        line-height: 25px;
+
+    }
+
+
+/*    .seccion_item:nth-child(1) {
+        border-left: 1px solid #E6E6E6;
+    } */
+
+    .alerta-cookies {													/* etilo aviso cookies */
+
+		margin-left: 5px;
+        margin-right: 5px;
+		margin-top: 5px;
+	}
+
+
+
+
+
+    /* SECCION 02 =============================================================== */
+    /* SECCION 02 =============================================================== */
+    /* SECCION 02 =============================================================== */
+
+
+
+    #seccion_02_items {
+
+        margin: 5px 25px 5px 25px;
+
+        background: radial-gradient(none);
+
+    }
+
+    #seccion_02 h2 {
+
+		margin-top: 10px;
+
+	}
+
+
+
+    /* ============================================================  */
+    /* ======= pie_banner =========================================  */
+    /* ============================================================  */
+
+
+    #pie_banner {
+
+        display: 			-webkit-flex;
+    	display: 			flex;
+    	-webkit-flex-direction: 	column;
+    	flex-direction: 			column;
+    	-webkit-justify-content: 	space-around;
+    	justify-content: 			space-around;
+
+    }
+
+
+
+    #contacto_form {
+            margin-top: 50px;
+
+    }
+
+
+
+    /* ============================================================  */
+    /* ======= pie_footer =========================================  */
+    /* ============================================================  */
+
+
+
+
+
+    /* ============================================================  */
+    /* ======= PARTES =============================================  */
+    /* ============================================================  */
+
+
+    .comments {
+
+        padding: 0px;
+    }
+
+
+
+    .comment-panel {						/* estilo de cada lectura */
+
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+
+
+	}
+
+
+
+
+    /* ============================================================  */
+    /* ======= RESUMEN =============================================  */
+    /* ============================================================  */
+
+
+    #leyenda {
+        text-align: left;
+    }
+
+
+
+
+    /* ========================================================================== */
+    /*  SILOE                 =================================================== */
+    /* ========================================================================== */
+
+
+    .items_ensayo {
+		padding: 10px;
+	}
+
+    .item_ensayo {
+        text-align: right;
+    }
+
+    .marco_grupo_desplegables, .marco_grupo_items {
+		padding: 2px;
+        border: none;
+	}
+
+    .marco_item {
+        padding: 20px;
+        color: white;
+		background-color: #3d4045;
+    }
+
+
+
+
+    /* ========================================================================== */
+    /*  FORMULAROS SELECCIONAR MES O VASO PARA SILOE============================= */
+    /* ========================================================================== */
+
+    #resumen_index, #mes_index {				/* formulario para elejir mes para el informe de consumos. tambien para seleccionar el mes de partes o ensayos */
+
+        margin-right: 10px;
+        margin-left: 10px;
+
+    }
+
+}

@@ -1,0 +1,43 @@
+
+    <div class="container animated fadeIn" id="informe_siloe">
+
+        <h4><img src="/images/consumos2.png" alt="" /> Informe Siloe del vaso <%= vaso.nombre %> - Año <%= anio %></h4>
+        <br>
+
+        <div class="panel panel-default table-responsive">
+
+            <table class="table table-striped table-hover">
+
+                <thead>
+                    <tr>
+                        <th class="text-center">Nombre</th>
+                        <th class="text-center">Muestreos</th>
+                        <th class="text-center">Cumplen</th>
+                        <th class="text-center">Media</th>
+                        <th class="text-center">Máximo</th>
+                        <th class="text-center">Mínimo</th>
+                        <th class="text-center">No cumplen</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <% for (var i in resumen) {%>
+                        <tr>
+                            <td class="text-center"><%= resumen[i].nombre %></td>
+                            <td class="text-center"><%= resumen[i].muestreos %></td>
+                            <td class="text-center"><%= (Number(resumen[i].cumple)).formatNumber(0, ',', '.') %></td>
+                            <td class="text-center"><%= (Number(resumen[i].media)).formatNumber(2, ',', '.') %></td>
+                            <td class="text-center"><%= (Number(resumen[i].max)).formatNumber(2, ',', '.') %></td>
+                            <td class="text-center"><%= (Number(resumen[i].min)).formatNumber(2, ',', '.') %></td>
+                            <td class="text-center"><%= resumen[i].incumplidos %></td>
+                        </tr>
+                    <%}%>
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <br>
+
+    </div>
