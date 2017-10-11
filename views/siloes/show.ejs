@@ -1,14 +1,14 @@
 
 <div class="container-fluid animated animated-fast fadeIn margen_superior">
 
-		<h4 class="texto_tipo_3 text-center">Ensayos del <%= siloe.dia %>-<%= siloe.mes %>-<%= siloe.anio %></h4>
+		<h4 class="text-center"><strong>Ensayos del <%= siloe.dia %>-<%= siloe.mes %>-<%= siloe.anio %></strong></h4>
 		<br>
 				<% for (var index in ensayos) {%>
 
 						<% if (session.user) {%>
 							<div class="ensayo-panel">
 
-								<div class="container">
+								<div class="container-fluid">
 									<% if ((session.user.isAdmin || (session.user && siloe.UserId === session.user.id))) {%>
 
 										<div class="row">
@@ -16,35 +16,35 @@
 											<div class="col-md-6 col-sm-6 datos_cabeceras">
 
 												<div class="col-md-6 col-sm-6 col-xs-6 alineacion_dcha">
-													<h5>Ensayo nº: </h5>
+													<h5><strong>Ensayo nº: </strong></h5>
 												</div>
 												<div class="col-md-6 col-sm-6 col-xs-6 alineacion_izda">
 													<h5><span class="texto_tipo_1"><%=ensayos[index].id%></span></h5>
 												</div>
 
 												<div class="col-md-6 col-sm-6 col-xs-6 alineacion_dcha">
-													<h5>Vaso: </h5>
+													<h5><strong>Vaso: </strong></h5>
 												</div>
 												<div class="col-md-6 col-sm-6 col-xs-6 alineacion_izda texto_tipo_1">
 													<h5><%= ensayos[index].vasoId %> - <%= ensayos[index].nombre %></h5>
 												</div>
 
 												<div class="col-md-6 col-sm-6 col-xs-6 alineacion_dcha">
-													<h5>Ubicación:</h5>
+													<h5><strong>Ubicación: </strong></h5>
 												</div>
 												<div class="col-md-6 col-sm-6 col-xs-6 alineacion_izda">
 													<h5><%= ensayos[index].ubicacion %></h5>
 												</div>
 
 												<div class="col-md-6 col-sm-6 col-xs-6 alineacion_dcha">
-													<h5>Capacidad: </h5>
+													<h5><strong>Capacidad: </strong></h5>
 												</div>
 												<div class="col-md-6 col-sm-6 col-xs-6 alineacion_izda">
 													<h5><%= (ensayos[index].capacidad).toFixed(2) %><small> m3</small></h5>
 												</div>
 
 												<div class="col-md-6 col-sm-6 col-xs-6 alineacion_dcha">
-													<h5>Interior: </h5>
+													<h5><strong>Interior: </strong></h5>
 												</div>
 												<div class="col-md-6 col-sm-6 col-xs-6 alineacion_izda">
 													<h5>
@@ -57,7 +57,7 @@
 												</div>
 
 												<div class="col-md-6 col-sm-6 col-xs-6 alineacion_dcha">
-													<h5>Tipo de ensayo: </h5>
+													<h5><strong>Tipo de ensayo: </strong></h5>
 												</div>
 												<div class="col-md-6 col-sm-6 col-xs-6 alineacion_izda">
 													<h5><%= ensayos[index].tipo_ensayo %></h5>
@@ -69,7 +69,7 @@
 
 
 										<form class="form-horizontal" method="post" action="/siloes/<%=siloe.id%>/ensayos/<%=ensayos[index].id%>/update?_method=put">
-											<div class="container">
+											<div class="container-fluid">
 												<div id="accordion" role="tablist">
 
 											  		<div class="card">

@@ -75,11 +75,12 @@
 
 
 
-    #login_inicio {
+    #login_inicio form {
 
 
-
-        padding-left: 80px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
 
     }
 
@@ -153,9 +154,9 @@
 
     .alerta-cookies {													/* etilo aviso cookies */
 
-		margin-left: 5px;
-        margin-right: 5px;
-		margin-top: 5px;
+		margin-left: 0px;
+        margin-right: 30px;
+		margin-top: 15px;
 	}
 
 

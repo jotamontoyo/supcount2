@@ -1,5 +1,5 @@
 
-<div class="container animated animated-fast fadeIn margen_superior">
+<div class="container-fluid animated animated-fast fadeIn margen_superior">
 
 	<div class="row">
 
@@ -10,14 +10,14 @@
 			<div class="col-md-6 col-sm-6 col-xs-6 alineacion_dcha">
 				<h5><strong>Parte nº: </strong></h5>
 			</div>
-			<div class="col-md-6 col-sm-6 col-xs-6 alineacion_izda texto_tipo_1">
+			<div class="col-md-6 col-sm-6 col-xs-6 alineacion_izda">
 				<h5><%= quiz.id %></h5>
 			</div>
 
 			<div class="col-md-6 col-sm-6 col-xs-6 alineacion_dcha">
 				<h5><strong>Fecha: </strong></h5>
 			</div>
-			<div class="col-md-6 col-sm-6 col-xs-6 alineacion_izda texto_tipo_1">
+			<div class="col-md-6 col-sm-6 col-xs-6 alineacion_izda">
 				<h5><%= quiz.dia %>-<%= quiz.mes %>-<%= quiz.anio %></h5>
 			</div>
 
@@ -34,16 +34,16 @@
 
 	<br>
 	<h4 class="text-center">Lecturas</h4>
-	<hr>
 
 
-	<div class="container comments">
+
+	<div class="container-fluid comments">
 
 
 				<% for (var index in quiz.comments) {%>
 
 
-					<div class="col-sm-4">
+					<div class="col-md-4 col-sm-6 col-xs-12">
 
 						<% if (!session.user && quiz.comments[index].publicado) {%>
 							<div class="comment-panel">
@@ -104,28 +104,26 @@
 
 																		<input type="text" class="form-control hidden" id="codigo" name="comment[codigo]" value="<%=quiz.comments[index].codigo%>" pattern="[0-9]{1,}"/></h5>
 
-																		<div class="form-group">
-																			<div class="col-md-3" style="margin-top: 6px;">
-																				<label for="lectura_actual">Lectura</label>
+
+																			<div class="form-group">
+																				<label for="lectura_actual" class="col-sm-5 col-md-5 control-label">Lectura:</label>
+
+																				<div class="col-sm-7 col-md-7">
+																					<input type="number" min="0.0" class="form-control" id="lectura_actual" name="comment[lectura_actual]" value="<%= (quiz.comments[index].lectura_actual).toFixed(2) %>" required step="0.1"/>
+																				</div>
 																			</div>
-																			<div class="col-md-9">
-																				<input type="number" min="0.0" class="form-control" id="lectura_actual" name="comment[lectura_actual]" value="<%= (quiz.comments[index].lectura_actual).toFixed(2) %>" required step="0.1"/>
-																			</div>
-																		</div>
 
 																		<% if (quiz.comments[index].deposito) { %>
 																			<div class="form-group">
-																				<div class="col-md-3" style="margin-top: 6px;">
-																					<label for="carga">Carga</label>
-																				</div>
-																				<div class="col-md-9">
+																				<label for="carga" class="col-sm-5 col-md-5 control-label">Carga:</label>
+																				<div class="col-sm-7 col-md-7">
 																					<input type="number" min="0" class="form-control" id="carga" name="comment[carga]" value="<%= (quiz.comments[index].carga).toFixed(2) %>" step="0.1"/>
 																				</div>
 																			</div>
 																		<%} else {%>
 																			<div class="form-group">
 
-																				<div class="col-md-3" style="margin-top: 6px;">
+																				<div class="col-md-3">
 
 																				</div>
 																				<div class="col-md-9">
@@ -134,7 +132,7 @@
 																			</div>
 																		<%}%>
 
-																		<div class="col-md-12">
+																		<div class="col-sm-12 col-md-12">
 												                            <div class="panel-group" id="agregar-comentario" role="tablist" aria-multiselectable="true">
 												                                <div class="faq">
 												                                    <div class="panel-heading" role="tab" id="agregar">

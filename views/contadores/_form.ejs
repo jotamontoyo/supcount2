@@ -1,5 +1,5 @@
 
-<div class="container" id="contador_form">
+<div class="container-fluid" id="contador_form">
 
     <h4><img src="/images/contador2.png" alt="" /> Contador</h4>
     <br>
@@ -34,12 +34,12 @@
     </div>
 
     <div class="form-group">
-        <label for="deposito" class="col-md-3 control-label">Depósito:</label>
-        <div class="col-md-1">
+        <label for="deposito" class="col-md-3 col-xs-3 form-check-label" style="text-align: right">Depósito:</label>
+        <div class="col-md-1 col-xs-1">
             <% if (contador.deposito) { %>
-                <input type="checkbox" class="form-control" checked id="deposito" name="contador[deposito]" value="<%= contador.deposito %>" placeholder="deposito"/>
+                <input type="checkbox" class="form-check-input" checked id="deposito" name="contador[deposito]" value="<%= contador.deposito %>" placeholder="deposito"/>
             <%} else { %>
-                <input type="checkbox" class="form-control" id="deposito" name="contador[deposito]" value="<%= contador.deposito %>" placeholder="deposito"/>
+                <input type="checkbox" class="form-check-input" id="deposito" name="contador[deposito]" value="<%= contador.deposito %>" placeholder="deposito"/>
             <%}%>
 
 

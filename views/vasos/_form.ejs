@@ -27,12 +27,12 @@
     </div>
 
     <div class="form-group">
-        <label for="interior" class="col-md-3 control-label">Interior:</label>
-        <div class="col-md-1">
+        <label for="interior" class="col-md-3 col-xs-3 form-check-label" style="text-align:right">Interior:</label>
+        <div class="col-md-1 col-xs-1">
             <% if (vaso.interior) { %>
-                <input type="checkbox" class="form-control" checked id="interior" name="vaso[interior]" value="<%= vaso.interior %>" />
+                <input type="checkbox" class="form-check-input" checked id="interior" name="vaso[interior]" value="<%= vaso.interior %>" />
             <%} else { %>
-                <input type="checkbox" class="form-control" id="interior" name="vaso[interior]" value="<%= vaso.interior %>" />
+                <input type="checkbox" class="form-check-input" id="interior" name="vaso[interior]" value="<%= vaso.interior %>" />
             <%}%>
         </div>
     </div>
