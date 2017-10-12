@@ -54,7 +54,8 @@
 	router.get('/user/:userId(\\d+)/edit',  			sessionController.loginRequired, userController.ownershipRequired, userController.edit);     	// editar información de cuenta
 	router.put('/user/:userId(\\d+)',  					sessionController.loginRequired, userController.ownershipRequired, userController.update);     	// actualizar información de cuenta
 	router.delete('/user/:userId(\\d+)/destroy',		sessionController.loginRequired, userController.ownershipRequired, userController.destroy);
-	router.get('/user/:userId(\\d+)/quizes',			sessionController.loginRequired, quizController.index);
+	router.get('/user/:userId(\\d+)/quizes',			sessionController.loginRequired, quizController.index);											// si va con user el controller aplica consulta para ese user
+	router.get('/user/:userId(\\d+)/siloes',			sessionController.loginRequired, siloeController.index);										// si va con user el controller aplica consulta para ese user
 
 
 

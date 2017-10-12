@@ -71,7 +71,7 @@
 
 	.texto_tipo_4 {
 
-        color: #7fff00;                 /* verde claro */
+        color: #04B404;                 /* verde normal */
 
     }
 
@@ -327,7 +327,7 @@
 	}
 
 	form .tira_botones > li > .btn_gral:hover {
-		color: #7fff00;
+		color: #04B404;
 	}
 
 	form .tira_botones > li > .btn_cancelar:hover {
@@ -1396,7 +1396,7 @@
 
 	#informe_siloe {			/* formato de la visualizacion en pantalla */
 
-		margin-top: 90px;
+		margin-top: 20px;
 		position: relative;
 
 	}

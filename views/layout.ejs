@@ -91,7 +91,7 @@
 		<header class="main-header">
 
 	    	<!-- Logo -->
-	    	<a href="#" class="logo">
+	    	<a href="/" class="logo">
 	      		<!-- mini logo for sidebar mini 50x50 pixels -->
 	      		<span class="logo-mini"><b>S</b>C</span>
 
@@ -102,7 +102,7 @@
 			<!-- Header Navbar: style can be found in header.less -->
 	    	<nav class="navbar navbar-static-top">
 	      		<!-- Sidebar toggle button-->
-	      		<a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+	      		<a href="/" class="sidebar-toggle" data-toggle="push-menu" role="button">
 	        		<span class="sr-only">Toggle navigation</span>
 	      		</a>
 	    	</nav>
@@ -200,9 +200,43 @@
 							<%}%>
 						<%}%>
 
-						<%if (session.user) {%>
+
+
+						<% if (session.user) {%>
+
 							<li class="header"></li>
-					        <li><a href="/logout"><i class="fa fa-circle-o text-red"></i> <span> Salir</span></a></li>
+
+
+
+					        <li><a href="/user/<%=session.user.id%>/edit"><img src="/images/user2.png" alt=""> <%=session.user.username%>
+								<% if (session.user.isAdmin) {%>
+									<span class="pull-right-container">
+						            	<span class="label label-warning pull-right">⭐</span>
+
+						            </span>
+								<%}%>
+								<% if (session.user.isSuperAdmin) {%>
+									<span class="pull-right-container">
+						            	<span class="label label-danger pull-right">⭐</span>
+						            </span>
+								<%}%>
+							</a></li>
+
+							<li class="treeview">
+					            <a href="#">
+					            	<img src="/images/home.png" width="18px;" alt="Home"/>
+					              	<span> Mis Documentos</span>
+									<span class="pull-right-container">
+						            	<i class="fa fa-angle-left pull-right"></i>
+						            </span>
+					            </a>
+					            <ul class="treeview-menu">
+					            	<li><a href="/user/<%=session.user.id%>/quizes"><img src="/images/partes3.png" alt="" /> Lecturas</a></li>
+					              	<li><a href="/user/<%=session.user.id%>/siloes"><img src="/images/probetas.png" alt="" /> Ensayos</a></li>
+					            </ul>
+					        </li>
+
+							<li><a href="/logout"><i class="fa fa-circle-o text-red"></i> <span> Salir</span></a></li>
 					        <!-- <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
 					        <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li> -->
 						<%}%>
@@ -307,7 +341,7 @@
 
 
 	<!-- MODAL ver mas ===================================================================================== -->
-	<div class="modal fade" id="ver-mas-modal" tabindex="-1" role="dialog" aria-labelledby="inicio" aria-hidden="true" style="padding-left: 0px">
+	<div class="modal modal-info fade" id="ver-mas-modal" tabindex="-1" role="dialog" aria-labelledby="inicio" aria-hidden="true" style="padding-left: 0px">
 		<div class="modal-dialog">
 			<div class="modal-content">
 
@@ -347,16 +381,14 @@
 
 <!--					<a id="acceso" href="/login"><img src="/images/user2.png" alt=""> Login&nbsp;</a> -->
 				<div class="modal-footer">
-					<button type="btn btn-small" class="btn btn-warning btn-xs" data-dismiss="modal">
-						Cerrar
-					</button>
+					<button type="button" class="btn btn-outline pull-right" data-dismiss="modal">Cerrar</button>
 				</div>
 			</div>
 		</div>
 	</div>
 
 	<!-- MODAL POLITICA DE PRIVACIDAD ===================================================================================== -->
-	<div class="modal fade" id="lopd-modal" tabindex="-1" role="dialog" aria-labelledby="myLOPD" aria-hidden="true">
+	<div class="modal modal-info fade" id="lopd-modal" tabindex="-1" role="dialog" aria-labelledby="myLOPD" aria-hidden="true">
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -393,14 +425,14 @@
 					</ul>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-warning btn-xs" data-dismiss="modal">Cerrar</button>
+					<button type="button" class="btn btn-outline pull-right" data-dismiss="modal">Cerrar</button>
 				</div>
 			</div>
 		</div>
 	</div>
 
 	<!-- MODAL POLITICA DE COOKIES ===================================================================================== -->
-	<div class="modal fade" id="cookies-modal" tabindex="-1" role="dialog" aria-labelledby="myCookies" aria-hidden="true">
+	<div class="modal modal-info fade" id="cookies-modal" tabindex="-1" role="dialog" aria-labelledby="myCookies" aria-hidden="true">
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -437,7 +469,7 @@
 
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-warning btn-xs" data-dismiss="modal">Cerrar</button>
+					<button type="button" class="btn btn-outline pull-right" data-dismiss="modal">Cerrar</button>
 				</div>
 			</div>
 		</div>
