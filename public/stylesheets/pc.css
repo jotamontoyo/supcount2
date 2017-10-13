@@ -211,7 +211,7 @@
 
 	.margen_superior {
 
-		margin-top: 40px;
+		margin-top: 20px;
 
 	}
 
@@ -1518,8 +1518,9 @@
 
 	}
 
-	.faq {
+	.faq a {
 
+		font-size: 12px;
 
 	}
 

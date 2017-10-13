@@ -1,21 +1,31 @@
 
     <!-- MODAL aviso maximo contadores ===================================================================================== -->
 
-    <div class="alert alert-info avisos animated animated-fast fadeIn" role="alert">
+    <script type="text/javascript">
 
-        <h5>Ha alcanzado el máximo de vasos. Para más informarción contacte con el administrador de este sitio web.</h5>
-        <div class="form-group text-center">
+        $(window).ready(function() {
 
-    		<ul class="tira_botones">
+            $('#aviso_max_vasos').modal('show');
 
-    			<li><a class="btn btn_gral" href="/vasos">
-    				Continuar
-    			</a></li>
+        });
 
-    		</ul>
+    </script>
 
-    	</div>
+    <div class="modal modal-warning fade" id="aviso_max_vasos">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Vasos</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Se ha alcanzado el número máximo de vasos disponibles para esta instalación. Si necesita solicitar algún tipo de ayuda póngase en contacto con el departamento de soporte en soporte@registrosdemantenimiento.com.</p>
+                    <p><h6 class="text-center">&copy; 2017 cosilsCompany, Inc.</h6></p>
+                </div>
+                <div class="modal-footer">
+                    <a href="/vasos" type="button" class="btn btn-outline pull-right">Volver</a>
+                </div>
+            </div>
 
-
-
+        </div>
     </div>

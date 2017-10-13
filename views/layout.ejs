@@ -91,12 +91,14 @@
 		<header class="main-header">
 
 	    	<!-- Logo -->
-	    	<a href="/" class="logo">
+	    	<a data-toggle="modal"data-target="#ver-mas-modal" class="logo">
+
 	      		<!-- mini logo for sidebar mini 50x50 pixels -->
 	      		<span class="logo-mini"><b>S</b>C</span>
 
 	      		<!-- logo for regular state and mobile devices -->
 	      		<span class="logo-lg"><b>Sup</b>Counter</span>
+
 	    	</a>
 
 			<!-- Header Navbar: style can be found in header.less -->
@@ -117,12 +119,27 @@
 			    <!-- sidebar: style can be found in sidebar.less -->
 			    <section class="sidebar">
 
+					<a href="http://www.piscinas7islas.com/" target="_blank">
+					<div class="user-panel">
+
+
+								<div class="pull-right image">
+					            	<img src="/images/logos/logo_piscinas7islas.jpg" class="" alt="User Image" style="width: 34px">
+					          	</div>
+
+					        	<div class="pull-left info">
+					            	<p>Patrocindo por</p>
+					        	</div>
+
+			        </div>
+					</a>
+
 
 		        	<!-- sidebar menu: : style can be found in sidebar.less -->
 			        <ul class="sidebar-menu" data-widget="tree">
 
 						<li class="header text-center">
-							<a data-toggle="modal"data-target="#ver-mas-modal" style="color:#337ab7;">Supcounter ©️</a>
+							<!-- <a data-toggle="modal"data-target="#ver-mas-modal" style="color:#337ab7;">Supcounter ©️</a> -->
 						</li>
 
 			        	<li class="">
@@ -208,19 +225,18 @@
 
 
 
-					        <li><a href="/user/<%=session.user.id%>/edit"><img src="/images/user2.png" alt=""> <%=session.user.username%>
-								<% if (session.user.isAdmin) {%>
+					        <li class="">
+								<a href="/user/<%=session.user.id%>/edit"><img src="/images/user2.png" alt=""><span> <%=session.user.username%></span>
 									<span class="pull-right-container">
-						            	<span class="label label-warning pull-right">⭐</span>
-
-						            </span>
-								<%}%>
-								<% if (session.user.isSuperAdmin) {%>
-									<span class="pull-right-container">
-						            	<span class="label label-danger pull-right">⭐</span>
-						            </span>
-								<%}%>
-							</a></li>
+										<% if (session.user.isAdmin) {%>
+											<span class="label label-warning pull-right">⭐</span>
+										<%}%>
+										<% if (session.user.isSuperAdmin) {%>
+						            		<span class="label label-danger pull-right">⭐</span>
+										<%}%>
+									</span>
+								</a>
+							</li>
 
 							<li class="treeview">
 					            <a href="#">
@@ -305,7 +321,7 @@
 				&nbsp;
 				&middot;
 				&nbsp;
-				Patrocinado por: <a href="http://www.piscinas7islas.com/" target="_blank"></a>
+				Patrocinado por &nbsp;<a href="http://www.piscinas7islas.com/" target="_blank"><img src="/images/logos/logo_piscinas7islas.jpg" alt="" style="width: 50px;"></a>
 			</h6>
 		</footer>
 
