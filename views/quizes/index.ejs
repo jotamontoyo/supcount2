@@ -11,9 +11,9 @@
 			<thead>
 				<tr>
 					<th class="text-center">Fecha</th>
-					<th class="text-center">Parte</th>
+					<th class="text-center">Número</th>
 					<th class="text-center">User</th>
-					<th class="text-center">Centro</th>
+					<!-- <th class="text-center">Centro</th> -->
 					<th class="text-center">Revisado</th>
 				</tr>
 			</thead>
@@ -27,7 +27,7 @@
 						<td class="text-center"><a href="/quizes/<%= quizes[i].id %>"><%= quizes[i].dia %>-<%= quizes[i].mes %>-<%= quizes[i].anio %></a></td>
 						<td class="text-center"><a href="/quizes/<%= quizes[i].id %>"><%= quizes[i].id %></a></td>
 						<td class="text-center"><%= quizes[i].UserName %></td>
-						<td class="text-center"><%= quizes[i].centro %></td>
+						<!-- <td class="text-center"><%= quizes[i].centro %></td> -->
 						<td class="text-center">
 							<% if (quizes[i].estado === 'abierto') {%>
 								<span class="" aria-hidden="true"></span>
