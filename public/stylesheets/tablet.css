@@ -36,6 +36,14 @@
         font-size: 1.2vw;
     }
 
+    #login_inicio {								/* login de la pantalla de inicio */
+
+        margin-top: -50px;
+		position: absolute;
+
+
+	}
+
 
 
     /* SECCION 01 =============================================================== */

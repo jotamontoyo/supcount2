@@ -28,6 +28,11 @@
 
     }
 
+    .margen_superior {
+
+
+    }
+
 
 
     /* ==== FORMATOS DE TEXTO ==============================================*/
@@ -74,14 +79,13 @@
 
 
 
+    #login_inicio {								/* login de la pantalla de inicio */
+        margin-top: -50px;
+	}
 
     #login_inicio form {
-
-
         margin-left: auto;
         margin-right: auto;
-        margin-top: 50px;
-
     }
 
 

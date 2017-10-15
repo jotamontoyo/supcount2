@@ -358,8 +358,6 @@
 	#menu li {
 
 
-
-
 	}
 
 	#menu .sidebar-menu img {
@@ -369,6 +367,7 @@
     	filter: grayscale(100%);*/
 
 	}
+
 
 
 
@@ -756,53 +755,35 @@
 		z-index: 5;
 	}
 
-	#inicio_form {
 
+
+
+	#inicio_form {								/* form de login */
 		margin-right: 250px;
-
 		float: right;
-
-
-
 	}
 
-
 	#inicio_form input {
-
 		max-width: 150px;
 		height: 22px;
 		padding-left: 0px;
 		font-size: 12px;
-
-
-
 	}
 
 
 	.input-login-incio {
-
 		max-width: 150px;
-
 		padding-left: 5px;
 		padding-right: 0px;
-
 		text-align: left;
 	}
 
 	.input-login-incio button {
-
-
-
 		margin-top: 0px;
-
-
 	}
 
 	.input-login-incio .input-group .input-group-addon {
-
 		padding: 2px 5px 2px 5px;
-
-
 	}
 
 
@@ -1529,7 +1510,7 @@
 
 	.faq a {
 
-		font-size: 12px;
+		font-size: 14px;
 
 	}
 

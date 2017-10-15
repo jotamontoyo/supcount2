@@ -43,7 +43,7 @@
 					<tr>
 						<td class="text-center"><a href="/siloes/<%= siloes[i].id %>"><%= siloes[i].dia %>-<%= siloes[i].mes %>-<%= siloes[i].anio %></a></td>
 						<td class="text-center"><a href="/siloes/<%= siloes[i].id %>"><%= siloes[i].id %></a></td>
-						<td class="text-center"><a href="/siloes/<%= siloes[i].id %>"><%= siloes[i].UserName %></a></td>
+						<td class="text-center"><%= siloes[i].UserName %></td>
 						<td class="text-center">
 							<% if (siloes[i].estado === 'abierto') {%>
 								<span class="" aria-hidden="true"></span>
