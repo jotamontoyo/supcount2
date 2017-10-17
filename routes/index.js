@@ -19,6 +19,7 @@
 	var vasoController = require('../controllers/vaso_controller');
 	var siloeController = require('../controllers/siloe_controller');
 	var ensayoController = require('../controllers/ensayo_controller');
+	var supportController = require('../controllers/support_controller');
 
 	router.get('/', function (req, res) {													/* GET home page. */
 		res.render('index', {title: 'Registros de Mantemiento', errors: []});				// cuando renderice la vista index.ejs le pasa el objeto title: 'Quiz'
@@ -56,6 +57,10 @@
 	router.delete('/user/:userId(\\d+)/destroy',		sessionController.loginRequired, userController.ownershipRequired, userController.destroy);
 	router.get('/user/:userId(\\d+)/quizes',			sessionController.loginRequired, quizController.index);											// si va con user el controller aplica consulta para ese user
 	router.get('/user/:userId(\\d+)/siloes',			sessionController.loginRequired, siloeController.index);										// si va con user el controller aplica consulta para ese user
+
+
+	router.get('/support',                            	sessionController.loginRequired, supportController.index);
+	router.put('/support/send_mail',                  	sessionController.loginRequired, supportController.send_mail);
 
 
 

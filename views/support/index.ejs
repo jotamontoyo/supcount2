@@ -1,0 +1,94 @@
+
+    <!-- Main content  SUPPORT -->
+    <section class="content">
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <div class="box box-primary">
+
+
+                    <form class="form"
+                			method="post"
+                			action="/support/send_mail?_method=put">
+
+
+
+
+
+
+
+
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Solicitud de Soporte</h3>
+                    </div>
+
+                    <div class="box-body">
+
+                        <!-- <div class="form-group">
+                            <input class="form-control" id="email_to" name="email_to" value="support@registrosdemantenimiento.com" disabled placeholder="To:">
+                        </div>
+
+                        <div class="form-group">
+                            <input class="form-control" id="email_from" name="email_from" value="<%= user.email %>" disabled placeholder="From:">
+                        </div> -->
+
+                        <div class="form-group">
+                            <input class="form-control" placeholder="Motivo" id="subject" name="subject">
+                        </div>
+
+                        <div class="form-group">
+                            <textarea id="compose-textarea" class="form-control" name="text" style="height: 300px">
+                                <!-- <h3><%= user.centro %></h3> -->
+                                <h4>Estimado <%= user.username %> - <%= user.centro %>, describa a continuación cualquier sugerencia, problema o necesidad de información.</h4>
+                                <p></p>
+                                <ul>
+                                    <!-- <li>List item one</li>
+                                    <li>List item two</li>
+                                    <li>List item three</li>
+                                    <li>List item four</li> -->
+                                </ul>
+                                <p>Le agradecemos su colaboración. SupCounter <span style="font-size: 15px;">&copy;</span>.</p>
+                                <!-- <p>SupCounter<span style="font-size: 15px;">&copy;</span></p> -->
+                                <p></p>
+                            </textarea>
+                        </div>
+
+                        <!-- <div class="form-group">
+                            <div class="btn btn-default btn-file">
+                                <i class="fa fa-paperclip"></i> Attachment
+                                <input type="file" name="attachment">
+                            </div>
+                            <p class="help-block">Max. 32MB</p>
+                        </div> -->
+
+                    </div>
+                    <!-- /.box-body -->
+                    <div class="box-footer">
+
+                        <div class="pull-right">
+                            <!-- <button type="button" class="btn btn-default"><i class="fa fa-pencil"></i> Draft</button> -->
+                            <button type="submit" class="btn btn-primary" href="/support/send_mail"><i class="fa fa-envelope-o"></i> Enviar</button>
+                        </div>
+
+                        <!-- <button type="reset" class="btn btn-default"><i class="fa fa-times"></i> Discard</button> -->
+
+                    </div>
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+      $(function () {
+        //Add text editor
+        $("#compose-textarea").wysihtml5();
+      });
+    </script>

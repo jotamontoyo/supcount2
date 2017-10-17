@@ -106,5 +106,25 @@
 			return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
 		};
 
+
+	nombreMes = function(numero_mes) {
+	    var nombre_mes;
+	    if (numero_mes === 1) { nombre_mes = "Enero"};
+	    if (numero_mes === 2) { nombre_mes = "Febrero"};
+	    if (numero_mes === 3) { nombre_mes = "Marzo"};
+	    if (numero_mes === 4) { nombre_mes = "Abril"};
+	    if (numero_mes === 5) { nombre_mes = "Mayo"};
+	    if (numero_mes === 6) { nombre_mes = "Junio"};
+	    if (numero_mes === 7) { nombre_mes = "Julio"};
+	    if (numero_mes === 8) { nombre_mes = "Agosto"};
+	    if (numero_mes === 9) { nombre_mes = "Septiembre"};
+	    if (numero_mes === 10) { nombre_mes = "Octubre"};
+	    if (numero_mes === 11) { nombre_mes = "Noviembre"};
+	    if (numero_mes === 12) { nombre_mes = "Diciembre"};
+	    return nombre_mes;
+	};
+
+
+
 	module.exports = app;
 	// app.listen(3000);

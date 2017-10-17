@@ -103,12 +103,13 @@
         models.Criterio.findAll({
             where: 		{ContadorId: Number(req.contador.id)},
             order:      [['mes', 'ASC']]
-        }).then(function( criterios  ) {
+        }).then( criterios  => {
             res.render('contadores/show', {contador: req.contador, criterios: criterios, errors: []});
         });
 
 	};
 
+    
 
 
 
