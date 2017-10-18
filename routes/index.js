@@ -61,6 +61,7 @@
 
 	router.get('/support',                            	sessionController.loginRequired, supportController.index);
 	router.put('/support/send_mail',                  	sessionController.loginRequired, supportController.send_mail);
+	router.post('/support/upload',                    	sessionController.loginRequired, supportController.upload);
 
 
 
@@ -83,7 +84,7 @@
 	router.delete('/quizes/:quizId(\\d+)',				sessionController.loginRequired, quizController.ownershipRequired, quizController.destroy);
 	router.get('/quizes/statistics',					statisticsController.calculate, statisticsController.show);
 	router.get('/quizes/:quizId(\\d+)/image', 			quizController.image);												// se dispara cuando se carga una img en el formulario show
-	router.post('/quizes/uploadimg',                    quizController.uploadimg);
+	router.post('/quizes/upload',                    quizController.upload);
 	// router.get('/quizes:search',	                	quizController.search);
 
 

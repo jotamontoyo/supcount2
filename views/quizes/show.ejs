@@ -1,4 +1,15 @@
 
+<script>
+	window.onload = function() {
+		var pos = window.name || 0;
+		window.scrollTo(0, pos);
+	};
+	window.onunload = function() {
+		window.name = self.pageYOffset || (document.documentElement.scrollTop + document.body.scrollTop);
+	};
+</script>
+
+
 <div class="container-fluid animated animated-fast fadeIn margen_superior">
 
 	<div class="row">

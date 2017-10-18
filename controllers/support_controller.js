@@ -1,24 +1,19 @@
 
-    // var models = require('../models/models.js');
-
-
-
-
-
-
-    exports.index = function(req, res, next) {
-
-        res.render('support/index', {user: req.session.user, errors: []});
-
+    exports.index = function(req, res) {
+        var fecha = new Date();
+		var dia = ("0" + fecha.getUTCDate()).slice(-2);
+		var mes = ("0" + (fecha.getUTCMonth() + 1)).slice(-2);														// se le añade 1 porque van de 0 a 11
+		var anio = fecha.getUTCFullYear();
+        fecha = dia + '-' + mes + '-' + anio;
+        res.render('support/index', {user: req.session.user, fecha: fecha, errors: []});
     };
 
 
+
+
+
+
     exports.send_mail = function(req, res) {
-
-        console.log('user mail............: ' + req.session.user.email);
-        console.log('subject............: ' + req.body.subject);
-
-
 
         'use strict';
         const nodemailer = require('nodemailer');
@@ -42,7 +37,6 @@
             subject: req.body.subject, 								// Subject line
             text: 'Nueva solicitud de soporte.', 								// plain text body
             html: req.body.text
-
         };
 
         transporter.sendMail(mailOptions, (error, info) => {							// send mail with defined transport object
@@ -53,6 +47,28 @@
             res.redirect('/support');
         });
 
+    };
 
 
+
+
+
+    exports.upload = function(req, res, next) {
+        var fs = require('fs-extra');
+        var fstream;
+        req.pipe(req.busboy);
+        req.busboy.on('file', function (fieldname, file, filename) {
+            if (filename) {
+                console.log("Uploading: " + filename);
+                fstream = fs.createWriteStream('public/support_upload/' + req.session.user.username + '-' + req.session.user.centro + '-' + filename);					// Path where image will be uploaded
+                file.pipe(fstream);
+                fstream.on('close', function () {
+                    console.log("Upload Finished of " + filename);
+                    res.redirect('back');           										// where to go next
+                });
+            } else {
+                res.render('avisos/aviso_sin_nombre', {errors: []});
+            };
+
+        });
     };

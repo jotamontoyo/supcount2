@@ -1,4 +1,15 @@
 
+<script>
+	window.onload = function() {
+		var pos = window.name || 0;
+		window.scrollTo(0, pos);
+	};
+	window.onunload = function() {
+		window.name = self.pageYOffset || (document.documentElement.scrollTop + document.body.scrollTop);
+	};
+</script>
+
+
 <div class="container-fluid animated animated-fast fadeIn margen_superior">
 
 		<h4 class="text-center"><strong>Ensayos del <%= siloe.dia %>-<%= siloe.mes %>-<%= siloe.anio %></strong></h4>

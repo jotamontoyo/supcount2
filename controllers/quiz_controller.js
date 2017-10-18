@@ -497,12 +497,12 @@
 	};
 
 
-	exports.uploadimg = function(req, res, next) {
+	exports.upload = function(req, res, next) {
         var fstream;
         req.pipe(req.busboy);
         req.busboy.on('file', function (fieldname, file, filename) {
             console.log("Uploading: " + filename);
-            fstream = fs.createWriteStream('public/img/' + filename);					// Path where image will be uploaded
+            fstream = fs.createWriteStream('public/images/' + filename);					// Path where image will be uploaded
             file.pipe(fstream);
             fstream.on('close', function () {
                 console.log("Upload Finished of " + filename);

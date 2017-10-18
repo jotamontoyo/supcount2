@@ -1,0 +1,31 @@
+
+    <!-- MODAL aviso maximo antiguedad ===================================================================================== -->
+
+    <script type="text/javascript">
+
+        $(window).ready(function() {
+
+            $('#aviso_sin_nombre').modal('show');
+
+        });
+
+    </script>
+
+    <div class="modal modal-warning fade" id="aviso_sin_nombre">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Nombre no válido</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Ha de seleccionar un nombre de archivo válido para poderlo enviar al departamento de soporte.</p>
+                    <p><h6 class="text-center">&copy; 2017 cosilsCompany, Inc.</h6></p>
+                </div>
+                <div class="modal-footer">
+                    <a href="/support" type="button" class="btn btn-outline pull-right">Volver</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
