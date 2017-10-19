@@ -32,7 +32,7 @@
 					<th class="text-center">Fecha</th>
 					<th class="text-center">Número</th>
 					<th class="text-center">User</th>
-					<th class="text-center">Revisado</th>
+					<th class="text-center">Estado</th>
 				</tr>
 			</thead>
 
@@ -46,9 +46,9 @@
 						<td class="text-center"><%= siloes[i].UserName %></td>
 						<td class="text-center">
 							<% if (siloes[i].estado === 'abierto') {%>
-								<span class="" aria-hidden="true"></span>
+								<span class="label label-warning">Abierto</span>
 							<%} else if (siloes[i].estado === 'cerrado') {%>
-								<i class="fa fa-check"></i>
+								<span class="label label-success">Cerrado</span>
 							<%}%>
 						</td>
 						<% if (session.user) {
