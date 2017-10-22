@@ -27,7 +27,12 @@
 
 						<td class="text-center"><a href="/quizes/<%= quizes[i].id %>"><%= quizes[i].dia %>-<%= quizes[i].mes %>-<%= quizes[i].anio %></a></td>
 						<td class="text-center"><a href="/quizes/<%= quizes[i].id %>"><%= quizes[i].id %></a></td>
-						<td class="text-center"><%= quizes[i].UserName %></td>
+						<td class="text-center">
+							<%= quizes[i].UserName %>
+							<% if (session.user.isAdmin) {%>
+								<a href="/quizes/<%= quizes[i].id %>/crear_aviso"><i class="fa fa-hand-lizard-o"></i></a>
+							<%}%>
+						</td>
 
 						<td class="text-center">
 							<% if (quizes[i].estado === 'abierto') {%>
@@ -39,11 +44,11 @@
 
 						<% if (session.user) {%>
 
-							<% if (session.user.isAdmin) {%>
+							<!-- <% if (session.user.isAdmin) {%>
 								<td style="width:40px"><a class="" href="/quizes/<%= quizes[i].id %>/crear_aviso">
 									<img src="/images/send_email2.png" style="width: 20px;"/>
 								</a></td>
-							<%}%>
+							<%}%> -->
 
 							<% if (session.user.isAdmin || session.user.id === quizes[i].UserId) {%>
 
