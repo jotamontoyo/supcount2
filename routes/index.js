@@ -59,6 +59,7 @@
 	router.get('/user/:userId(\\d+)/siloes',			sessionController.loginRequired, siloeController.index);										// si va con user el controller aplica consulta para ese user
 
 
+	// Definición de rutas de support
 	router.get('/support',                            	sessionController.loginRequired, supportController.index);
 	router.put('/support/send_mail',                  	sessionController.loginRequired, supportController.send_mail);
 	router.post('/support/upload',                    	sessionController.loginRequired, supportController.upload);
@@ -84,7 +85,9 @@
 	router.delete('/quizes/:quizId(\\d+)',				sessionController.loginRequired, quizController.ownershipRequired, quizController.destroy);
 	router.get('/quizes/statistics',					statisticsController.calculate, statisticsController.show);
 	router.get('/quizes/:quizId(\\d+)/image', 			quizController.image);												// se dispara cuando se carga una img en el formulario show
-	router.post('/quizes/upload',                    quizController.upload);
+	router.post('/quizes/upload',                    	quizController.upload);
+	router.get('/quizes/:quizId(\\d+)/crear_aviso',		sessionController.loginRequired, quizController.crear_aviso);				// carga formulario quizes/quizes:Id(\\d+)/send_mail y dispara el controlador send_mail de quiz_Controller
+	router.put('/quizes/:quizId(\\d+)/send_mail',       sessionController.loginRequired, quizController.send_mail);
 	// router.get('/quizes:search',	                	quizController.search);
 
 

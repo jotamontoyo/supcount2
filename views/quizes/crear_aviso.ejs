@@ -1,0 +1,61 @@
+
+    <!-- CREAR AVISO DEL ADMINISTRADOR AL USUARIO QUE CREO EL PARTE -->
+    <section class="content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box box-primary">
+                    <br>
+                    <form class="form"
+                			method="post"
+                			action="/quizes/<%= quiz.id %>/send_mail?_method=put">
+
+                        <div class="box-header with-border">
+                            <!-- <div class="callout callout-info"> -->
+                                <h3 class="box-title">Bienvenido al centro de control de SupCounter<span style="font-size: 12px;">&copy;</span></h3>
+                                <h5>Se va a generar un aviso para el usuario que creó el parte nº: <%= quiz.id %> de fecha <%= quiz.dia %>-<%= quiz.mes %>-<%= quiz.anio %></h5>
+                            <!-- </div> -->
+                        </div>
+
+                        <div class="box-body">
+
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Motivo" id="subject" name="subject" required>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea id="compose-textarea" class="form-control" name="text" style="height: 300px">
+                                    <ul>
+                                        <li>Usuario: <%= quiz.UserName %></li>
+                                        <li>Centro: <%= quiz.centro %></li>
+                                        <li>Parte nº: <%= quiz.id %></li>
+                                        <li>Fecha del parte: <%= quiz.dia %>-<%= quiz.mes %>-<%= quiz.anio %></li>
+                                        <li>Fecha de la solicitud: <%= fecha %></li>
+                                    </ul>
+                                    <h4>Es necesario que revise el parte de lecturas arriba detallado.</h4>
+                                </textarea>
+                            </div>
+
+                        </div>
+
+                        <div class="box-footer">
+                            <div class="pull-right">
+                                <button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Enviar</button>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+      $(function () {
+        //Add text editor
+        $("#compose-textarea").wysihtml5();
+      });
+    </script>

@@ -46,7 +46,7 @@
 			order: [['fecha', 'ASC']]
 		};
 
-		if (req.user) {									// req.user se crea en autoload de user_controller si hay un GET con un user logueado. 
+		if (req.user) {									// req.user se crea en autoload de user_controller si hay un GET con un user logueado.
 			options = {
 				where: {UserId: req.user.id, centro: req.session.user.centro, mes: mes, anio: anio},
 				order: [['fecha', 'ASC']]

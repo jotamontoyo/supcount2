@@ -189,7 +189,7 @@
 						};
 					};
 				};
-				res.render('quizes/resumen', {quizes: quizes, contadores: contadores, imprimir: imprimir, errors: []});
+				res.render('quizes/resumen', {quizes: quizes, contadores: contadores, user: req.session.user, imprimir: imprimir, errors: []});
 			}).catch(function(error){next(error)});
 		}).catch(function(error){next(error)});
 
@@ -415,7 +415,6 @@
 
 	exports.update = function(req, res) {										// modifica un quiz
 //		req.quiz.fecha = req.body.quiz.fecha;
-
 		req.quiz.fecha = new Date(req.body.quiz.anio, req.body.quiz.mes - 1, req.body.quiz.dia);
 		req.quiz.dia = req.body.quiz.dia;
 		req.quiz.mes = req.body.quiz.mes;
@@ -437,20 +436,95 @@
 			res.render('quizes/edit', {quiz: req.quiz, errors: errores});
 		} else {
 			if (((fecha_actual - req.quiz.fecha) < (48*60*60*1000)) || (req.session.user.isAdmin)) {				// control de la antiguedad del parte
-
 				req.quiz
 				.save({fields: ["fecha", "pregunta", "respuesta", "centro", "proveedor", "estado", "dia", "mes", "anio"]})
 				.then(function() {res.redirect('/quizes')});
-
 			} else {
-
 				res.render('avisos/aviso_max_antiguedad', {errors: []});
-
 			};
-
 		};
 
 	};
+
+
+
+
+
+
+
+	exports.crear_aviso = function(req, res) {
+
+		var fecha = new Date();
+		var dia = ("0" + fecha.getUTCDate()).slice(-2);
+		var mes = ("0" + (fecha.getUTCMonth() + 1)).slice(-2);														// se le añade 1 porque van de 0 a 11
+		var anio = fecha.getUTCFullYear();
+        fecha = dia + '-' + mes + '-' + anio;
+		res.render('quizes/crear_aviso', {quiz: req.quiz, user: req.session.user, fecha: fecha, errors: []});
+
+	};
+
+
+
+
+
+
+
+	exports.send_mail = function(req, res) {
+
+		models.User.find({														// buscamos email administrador del centro
+			where: {
+				centro: req.session.user.centro,
+				isAdmin: true,
+				isSuperAdmin: false
+			}
+		}).then( admin => {
+			models.User.find({													// buscamos email del usuario que creo el parte
+				where: {
+					id: req.quiz.UserId
+				}
+			}).then( user => {
+
+				'use strict';
+		        const nodemailer = require('nodemailer');
+
+		        let transporter = nodemailer.createTransport({				// create reusable transporter object using the default SMTP transport
+		            host: 'registrosdemantenimiento.com',
+		            port: 465,
+		            secure: true, 											// secure:true for port 465, secure:false for port 587
+		            auth: {
+		                user: 'noreply@registrosdemantenimiento.com',
+		                pass: process.env.NODE_SMTP_PASS
+		            },
+		            tls: {
+		                rejectUnauthorized: false							// do not fail on invalid certs
+		            }
+		        });
+
+		        let mailOptions = {																						// setup email data with unicode symbols
+		            from: admin.email,	 		               	            // sender address
+		            to: user.email, 							// list of receivers
+		            subject: req.body.subject, 								// Subject line
+		            text: 'Nueva solicitud de soporte.', 								// plain text body
+		            html: req.body.text
+		        };
+
+		        transporter.sendMail(mailOptions, (error, info) => {							// send mail with defined transport object
+		            if (error) {
+		                return console.log(error);
+		            };
+		            console.log('Message %s sent: %s', info.messageId, info.response);
+		            res.redirect('back');
+		        });
+
+			});
+
+		});
+
+	};
+
+
+
+
 
 
 

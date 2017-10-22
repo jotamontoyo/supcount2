@@ -15,6 +15,7 @@
 					<th class="text-center">User</th>
 					<!-- <th class="text-center">Centro</th> -->
 					<th class="text-center">Estado</th>
+					<!-- <th class="text-center">Acciones</th> -->
 				</tr>
 			</thead>
 
@@ -27,7 +28,7 @@
 						<td class="text-center"><a href="/quizes/<%= quizes[i].id %>"><%= quizes[i].dia %>-<%= quizes[i].mes %>-<%= quizes[i].anio %></a></td>
 						<td class="text-center"><a href="/quizes/<%= quizes[i].id %>"><%= quizes[i].id %></a></td>
 						<td class="text-center"><%= quizes[i].UserName %></td>
-						<!-- <td class="text-center"><%= quizes[i].centro %></td> -->
+
 						<td class="text-center">
 							<% if (quizes[i].estado === 'abierto') {%>
 								<span class="label label-warning">Abierto</span>
@@ -36,8 +37,16 @@
 							<%}%>
 						</td>
 
-						<% if (session.user) {
-							if (session.user.isAdmin || session.user.id === quizes[i].UserId) {%>
+						<% if (session.user) {%>
+
+							<% if (session.user.isAdmin) {%>
+								<td style="width:40px"><a class="" href="/quizes/<%= quizes[i].id %>/crear_aviso">
+									<img src="/images/send_email2.png" style="width: 20px;"/>
+								</a></td>
+							<%}%>
+
+							<% if (session.user.isAdmin || session.user.id === quizes[i].UserId) {%>
+
 								<td style="width:40px"><a class="" href="/quizes/<%= quizes[i].id %>/print">
 									<img src="/images/printer.png" style="width: 20px;"/>
 								</a></td>
@@ -52,11 +61,55 @@
 									</form>
 								</td>
 
+
+								<!-- <td>
+									<div class="btn-group">
+									  <button type="button" class="btn btn-default btn-xs btn-flat dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									    Action
+									  </button>
+									  <div class="dropdown-menu">
+									    <a class="dropdown-item" href="#">Action</a>
+									    <a class="dropdown-item" href="#">Another action</a>
+									    <a class="dropdown-item" href="#">Something else here</a>
+									    <div class="dropdown-divider"></div>
+									    <a class="dropdown-item" href="#">Separated link</a>
+									  </div>
+									</div>
+								</td> -->
+
+
+								<!-- <td class="">
+									<div class="btn-group">
+					                  	<button type="button" class="btn btn-default btn-xs btn-flat dropdown-toggle" data-toggle="dropdown">
+					                    	<span class="caret"></span>
+					                    	<span class="sr-only">Toggle Dropdown</span>
+					                  	</button>
+					                  	<ul class="dropdown-menu" role="menu">
+					                    	<li><a href="/quizes/<%= quizes[i].id %>/print"><img src="/images/printer.png" style="width: 20px;"/> Print</a></li>
+					                    	<li><a href="/quizes/<%= quizes[i].id %>/edit"><img src="/images/edit3.png" style="width: 20px;"/> Edit</a></li>
+											<li class="divider"></li>
+											<li style="margin-left: 20px; margin-top: 0px;">
+												<form method="post" action="/quizes/<%= quizes[i].id %>?_method=delete">
+													<button class="btn btn-danger btn-xs" type="submit" onClick="return confirm('Borrar el Parte de fecha: <%= quizes[i].dia %>-<%= quizes[i].mes %>-<%= quizes[i].anio %>');">
+														<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+													</button> Eliminar
+												</form>
+											</li>
+					                  	</ul>
+					                </div>
+								</td> -->
+
+
 							<%}%>
+
+
+
+
+
 						<%}%>
 					</tr>
 
-				<% } %>
+				<%}%>
 			</tbody>
 		</table>
 	</div>
