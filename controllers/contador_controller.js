@@ -83,8 +83,30 @@
             		} else {
             			contador
             			.save()
-            			.then(function() {res.redirect('/contadores')});
-            		}
+            			.then(function() {
+                            for (var i = 1; i < 13; i++) {                                          // una vez creado el contador, se crea un criterio por mes
+                                var criterio = models.Criterio.build({
+                                    mes: i,
+                                    max: 0,
+                                    min: 0,
+                                    ContadorId: contador.id
+                                });
+                                var errors = criterio.validate();
+                                if (errors) {
+                        			var i = 0;
+                        			var errores = new Array();															// se convierte en [] con la propiedad message por compatibilidad con layout
+                        			for (var prop in errors) errores[i++] = {message: errors[prop]};
+                        			res.render('contadores/new', {contador: contador, errors: errores});
+                        		} else {
+                        			criterio
+                                    .save()
+                                    .then(function() {
+                                        res.redirect('/contadores/' + criterio.ContadorId);
+                                    });
+                                };
+                            };
+                        });
+            		};
                 } else {
                     res.render('avisos/aviso_max_contadores', {errors: []});
                 };
