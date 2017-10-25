@@ -89,21 +89,16 @@
 		anio = Number(req.body.mes_index.anio);
 
 		var options = {
-			where: {mes: mes, anio: anio},
+			where: {centro: req.session.user.centro, mes: mes, anio: anio},
 			order: [['fecha', 'ASC']]
 		};
 
-	  	if (req.user) {									// req.user se crea en autoload de user_controller si hay un GET con un user logueado
+		if (req.session.user) {									// req.user se crea en autoload de user_controller si hay un GET con un user logueado.
 			options = {
-				where: {
-					UserId: req.user.id,
-					centro: req.session.user.centro,
-					mes: mes,
-					anio: anio
-				},
+				where: {centro: req.session.user.centro, mes: mes, anio: anio},
 				order: [['fecha', 'ASC']]
 			};
-	  	};
+		};
 
 	  	models.Siloe.findAll(options).then(					// si hubo req.user ---> options contiene el SQL where UserId: req.user.id
 	    	function(siloes) {
