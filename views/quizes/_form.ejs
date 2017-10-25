@@ -1,14 +1,30 @@
 
+
+
 <div class="container-fluid" id="parte_form">
 
 	<h4><img src="/images/partes3.png" alt=""> Parte de Lecturas</h4>
 	<br>
 
 
+	<!-- <div class="form-group">
+		<label for="preg" class="col-md-4 col-sm-2 control-label">Fecha:</label>
+		<div class="col-md-4 col-sm-10">
+			<div class="input-group date" data-provide="datepicker" data-date-format="dd/mm/yyyy">
+		    	<input type="text" class="form-control" name="quiz[fecha]" value="<%= quiz.fecha %>">
+				  <div class="input-group-addon">
+				    <span class="glyphicon glyphicon-th"></span>
+				</div>
+			</div>
+		</div>
+	</div> -->
+
+
+
 	<div class="form-group">
 		<label for="preg" class="col-md-4 col-sm-2 control-label">Día:</label>
 		<div class="col-md-4 col-sm-10">
-			<input type="number" min="1" max="31" class="form-control" id="dia" name="quiz[dia]" value="<%= quiz.dia %>" placeholder="mes"/>
+			<input type="number" min="1" max="31" class="form-control" id="dia" name="quiz[dia]" value="<%= quiz.dia %>" placeholder="dia"/>
 		</div>
 	</div>
 
@@ -78,3 +94,20 @@
 	</ul>
 
 </div>
+
+<script type="text/javascript">
+
+	$(document).ready(function() {
+
+		// $('.datepicker').datepicker({
+		// format: 'dd/mm/yyyy',
+		// startDate: '-3d'
+		// });
+
+		// moment().format("MMM Do YY");
+
+	});
+
+
+
+</script>
