@@ -277,12 +277,32 @@
 
 
 
+
+	var moment = require('moment');
+
+
 	exports.new = function(req, res) {																				// GET /quizes/new, baja el formulario
 
-		var fecha = new Date();
+		// var fecha = new Date();
+
+
+		moment().format();
+
+		// From date to moment
+		var fecha = moment(new Date());
+		console.log('fecha 1.........: ' + fecha.format('DD MM YYYY'));
+
+		// From moment to date
+		fecha = fecha.toDate();
+		console.log('fecha 2............: ' + fecha);
+
+
+
+
 		var dia = ("0" + fecha.getUTCDate()).slice(-2);
 		var mes = ("0" + (fecha.getUTCMonth() + 1)).slice(-2);														// se le añade 1 porque van de 0 a 11
 		var anio = fecha.getUTCFullYear();
+
 
 		var quiz = models.Quiz.build({ 																				// crea el objeto quiz, lo construye con buid() metodo de sequilize
 			pregunta: "Motivo",
@@ -295,8 +315,14 @@
 			anio: anio
 		});
 
+
+
+		fecha = moment(fecha);
+
+
+
 		models.Proveedor.findAll().then(function(proveedor) {
-			res.render('quizes/new', {quiz: quiz, proveedor: proveedor, errors: []});   							// renderiza la vista quizes/new
+			res.render('quizes/new', {quiz: quiz, proveedor: proveedor, fecha: fecha, errors: []});   							// renderiza la vista quizes/new
 		});
 
 
@@ -315,6 +341,7 @@
 		req.body.quiz.UserName = req.session.user.username;
 		req.body.quiz.centro = req.session.user.centro;
 
+
 		var quiz = models.Quiz.build( req.body.quiz );											// construccion de objeto quiz para luego introducir en la tabla
 		quiz.fecha = new Date(req.body.quiz.anio, req.body.quiz.mes - 1, req.body.quiz.dia);     // captura la fecha del form y la añade al quiz con clase Date()
 
@@ -332,7 +359,7 @@
 		// console.log('fecha..........: ' + fecha);
 		// quiz.anio = fecha.getUTCFullYear();
 		// quiz.mes = ("0" + (fecha.getUTCMonth() + 1)).slice(-2);
-		// quiz.dia = ("0" + fecha.getUTCDate()).slice(-2);
+		// quiz.dia = quiz.fecha.date();
 
 
 
@@ -347,18 +374,14 @@
 			quiz
 			.save({fields: ["pregunta", "respuesta", "tema", "UserId", "UserName", "proveedor", "centro", "fecha", "dia", "mes", "anio"]})
 			.then(function() {
-
 				models.Contador.findAll({
 					where: {centro: req.session.user.centro},
 		            order: [['id', 'ASC']]
 		        }).then(function(contador) {
-
 					for (let i in contador) {											// crea tantas Lecturas como Contadores
-
 						models.Criterio.find({
 							where: {ContadorId: contador[i].id, mes: quiz.mes}			// busca criterio del contador segun el mes del parte
 						}).then(function(criterio) {
-
 							var comment = models.Comment.build({						// se crea la lectura
 								codigo: contador[i].id,
 								nombre: contador[i].nombre,
@@ -376,7 +399,6 @@
 								anio: quiz.anio,
 								QuizId: quiz.id											// al comment se le pasa el quizId del quiz para establecer la integridad referencial entre Quiz y Comment. indice secundario de Comment
 							});
-
 							var errors = comment.validate();
 							if (errors) {
 								let i = 0;
@@ -386,7 +408,9 @@
 							} else {
 								comment 																		// save: guarda en DB campos pregunta y respuesta de quiz
 								.save()
-								.then(function() {});
+								.then(function() {
+
+								});
 							};
 						});
 					};
@@ -397,8 +421,6 @@
 			});
 
 		};
-
-
 
 	};
 

@@ -7,17 +7,50 @@
 	<br>
 
 
-	<!-- <div class="form-group">
-		<label for="preg" class="col-md-4 col-sm-2 control-label">Fecha:</label>
-		<div class="col-md-4 col-sm-10">
-			<div class="input-group date" data-provide="datepicker" data-date-format="dd/mm/yyyy">
-		    	<input type="text" class="form-control" name="quiz[fecha]" value="<%= quiz.fecha %>">
-				  <div class="input-group-addon">
-				    <span class="glyphicon glyphicon-th"></span>
-				</div>
-			</div>
-		</div>
-	</div> -->
+
+
+	<div class="input-group date datepicker" data-provide="datepicker" data-date-format="dd/mm/yyyy">
+	    <input type="text" class="form-control" id="fecha" name="quiz[fecha]" value="<%= quiz.fecha %>">
+	    <div class="input-group-addon">
+	        <span class="glyphicon glyphicon-th"></span>
+	    </div>
+	</div>
+
+
+
+
+
+	<script type="text/javascript">
+
+		$(window).ready(function() {
+
+			$('.datepicker').datepicker({
+				format: {
+					/*
+					 * Say our UI should display a week ahead,
+					 * but textbox should store the actual date.
+					 * This is useful if we need UI to select local dates,
+					 * but store in UTC
+					 */
+
+					toDisplay: function (date, format, language) {
+						var d = new Date(date);
+						d.setDate(d.getDate() - 7);
+						return d.toISOString();
+					},
+					toValue: function (date, format, language) {
+						var d = new Date(date);
+						d.setDate(d.getDate() + 7);
+						return new Date(d);
+					}
+				},
+
+				autoclose: {true}
+			});
+
+		});
+
+	</script>
 
 
 
@@ -67,7 +100,7 @@
 		<div class="col-md-4 col-sm-10">
 			<select class="form-control" id="estado" name="quiz[estado]">
 				<option value='abierto' <%if (quiz.estado==='abierto') {%> selected <%}%>>Abierto</option>
-				<option value='cerrado' <%if (quiz.estado==='cerrado') {%> selected <%}%>>Cerrado - 📧</option>
+				<option value='cerrado' <%if (quiz.estado==='cerrado') {%> selected <%}%>>Cerrado</option>
 			</select>
 		</div>
 	</div>
