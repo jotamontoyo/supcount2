@@ -110,6 +110,10 @@
 		}).catch(function(error) {next(error)});
 	};
 
+
+
+
+
 	exports.webcreate = function(req, res) {											// POST /contacto/webcreate
 
 		var contacto = models.Contacto.build( 											// crea el objeto contacto, lo construye con buid() metodo de sequilize
@@ -130,48 +134,51 @@
 			.save()
 			.then(function() {
 
-/*				var postmark = require("postmark")(process.env.POSTMARK_API_TOKEN);
 
-				postmark.send({														// email al portal
-					"From": "no-reply@inbarasset.es",
-					"To": "contacto@inbarasset.es",
-					"Subject": "Solicitud de información recibida en el portal inbarasset.es",
-					"TextBody": "Tienes una solicitud pendiente de revisar. Entra en el portal www.inbarasset.es/login",
-					"Tag": "Solicitudes de informanción"
-				}, function(error, success) {
-					if (error) {
-						console.error("Unable to send via postmark: " + error.message);
-						return;
-					}
-					console.info("Sent to postmark for delivery");
-				});
 
-				postmark.sendEmailWithTemplate({									// email al cliente
-					"From": "no-reply@inbarasset.es",
-					"To": contacto.email,
-					"TemplateId": 772821,
-					"TemplateModel": {
-					    "product_name": "Inbar Asset",
-					    "name": contacto.nombre,
-					    "sender_name": "sender_name_Value",
-					    "product_address_line1": "Teléfono +34 601 23 79 19",
-					    "product_address_line2": "contacto@inbarasset.es"
-					}
-				}, function(error, success) {
-					if (error) {
-						console.error("Unable to send via postmark: " + error.message);
-						return;
-					}
-					console.info("Sent to postmark for delivery with template");
-				});
+				console.log('contacto email......:' + contacto.email);
+				console.log('contacto text......:' + contacto.comentario);
 
-				res.render('adjuntar/', {errors: []}); */
+
+				'use strict';
+		        const nodemailer = require('nodemailer');
+
+		        let transporter = nodemailer.createTransport({				// create reusable transporter object using the default SMTP transport
+		            host: 'registrosdemantenimiento.com',
+		            port: 465,
+		            secure: true, 											// secure:true for port 465, secure:false for port 587
+		            auth: {
+		                user: 'noreply@registrosdemantenimiento.com',
+		                pass: process.env.NODE_SMTP_PASS
+		            },
+		            tls: {
+		                rejectUnauthorized: false							// do not fail on invalid certs
+		            }
+		        });
+
+		        let mailOptions = {																						// setup email data with unicode symbols
+		            from: 'noreply@registrosdemantenimiento.com',	 		               	            // sender address
+		            to: contacto.email, 							// list of receivers
+		            // subject: req.body.subject, 								// Subject line
+		            text: 'Nueva solicitud de soporte.', 								// plain text body
+		            html: contacto.comentario
+		        };
+
+		        transporter.sendMail(mailOptions, (error, info) => {							// send mail with defined transport object
+		            if (error) {
+		                return console.log(error);
+		            };
+		            console.log('Message %s sent: %s', info.messageId, info.response);
+		            // res.redirect('back');
+		        });
+
+
+
+
 
 				res.redirect('/');
 
-/*				res.render('adjuntar/', { soypersona: true }, function(err, html) {
-					res.send(html);
-				}); */
+
 
 			});
 		};
