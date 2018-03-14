@@ -340,9 +340,64 @@
 	</div>
 
 
-	<section id="main-slider">
+
+
+
+
+	<header id="header">
+        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img src="" alt="logo"></a>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="scroll active"><a href="#inicio">Inicio</a></li>
+                        <li class="scroll"><a href="#features">Nuestros Productos</a></li>
+                        <li class="scroll"><a href="#services">Servicios</a></li>
+                        <li class="scroll"><a href="#portfolio">Portafolio</a></li>
+                        <li class="scroll"><a href="#about">Acerca de</a></li>
+                        <li class="scroll"><a href="#meet-team">Equipo</a></li>
+                        <li class="scroll"><a href="#pricing">Tarifas</a></li>
+                        <li class="scroll"><a href="#get-in-touch">Contacto</a></li>
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+    </header><!--/header-->
+
+
+
+
+
+
+	<div class="container-fluid animated fadeIn" id="inicio">
+
+		<div id="inicio-panel">
+				<h1>Gestión de Contadores y Ensayos</h1>
+				<h1><%= title %><span style="font-size: 18px"> &copy;</span></h1>
+				<h3>Software para la gestión de lecturas y consumos de contadores de agua</h3>
+				<h3>Ensayos de aguas de piscinas y vasos</h3>
+				<br>
+				<button class="btn btn-primary"
+					data-toggle="modal"
+					data-target="#ver-mas-modal">
+						<i class="fa fa-plus"></i> Info
+				</button>
+		</div>
+
+	</div>
+
+	<!-- <section id="main-slider">
         <div class="owl-carousel">
-            <div class="item" style="background-image: url(images/index/slider/bg1.jpg);">
+            <div class="item" style="background-image: url(images/slider/bg1.jpg);">
                 <div class="slider-inner">
                     <div class="container">
                         <div class="row">
@@ -356,8 +411,8 @@
                         </div>
                     </div>
                 </div>
-            </div><!--/.item-->
-             <div class="item" style="background-image: url(images/index/slider/bg2.jpg);">
+            </div
+             <div class="item" style="background-image: url(images/slider/bg2.jpg);">
                 <div class="slider-inner">
                     <div class="container">
                         <div class="row">
@@ -371,15 +426,16 @@
                         </div>
                     </div>
                 </div>
-            </div><!--/.item-->
-        </div><!--/.owl-carousel-->
-    </section><!--/#main-slider-->
+            </div>
+        </div>
+    </section> -->
 
     <section id="cta" class="wow fadeIn">
         <div class="container">
             <div class="row">
                 <div class="col-sm-9">
-                    <h2>Sed ut perspiciatis unde omnis iste</h2>
+					<h1>Registros de Mantemiento</h1>
+                    <h2>Estamos trabajado en una mejor experiencia para el usuario.</h2>
                     <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima.</p>
                 </div>
                 <div class="col-sm-3 text-right">
@@ -1168,16 +1224,16 @@
                 <div class="row">
                     <div class="col-sm-4 col-sm-offset-8">
                         <div class="contact-form">
-                            <h3>Contact Info</h3>
+                            <h3>Información de contacto</h3>
 
                             <address>
-                              <strong>Your Company, Inc.</strong><br>
-                              795 Folsom Ave, Suite 600<br>
-                              San Francisco, CA 94107<br>
-                              <abbr title="Phone">P:</abbr> (123) 456-7890
+                              <strong>cosilsCompany, Inc.</strong><br>
+                              Partida Moralet<br>
+                              03699 Alicante<br>
+                              <abbr title="email">Email:</abbr> contacto@registrosdemantenimiento.com
                             </address>
 
-                            <form id="main-contact-form" name="contact-form" method="post" action="contact-us.send.php">
+                            <!-- <form id="main-contact-form" name="contact-form" method="post" action="contact-us.send.php">
                                 <div class="form-group">
                                     <input type="text" name="name" class="form-control" placeholder="Name" required>
                                 </div>
@@ -1191,7 +1247,51 @@
                                     <textarea name="message" class="form-control" rows="8" placeholder="Message" required></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Send Message</button>
-                            </form>
+                            </form> -->
+
+
+							<form class="form-horizontal" method="post" action="/contactos/webcreate" id="" name="contact-form">
+
+								<!-- <h4>CONTACTO</h4>
+								<br> -->
+
+								<div class="form-group">
+									<input type="text" class="form-control" id="nombre" name="nombre" required placeholder="Nombre"/>
+								</div>
+
+								<div class="form-group">
+									<input type="text" class="form-control" id="email" name="email" required placeholder="Email"/>
+								</div>
+
+								<div class="form-group">
+									<textarea class="form-control" id="comentario" name="comentario" rows="6" placeholder="Comentarios"></textarea>
+								</div>
+
+								<div class="form-group">
+									<div class="col-md-12 text-center" id="check_lopd">
+
+											<input type="checkbox" id="lopd" name="lopd" required> Acepto la
+												<a class="button"
+													data-toggle="modal"
+													data-target="#lopd-modal">
+													<span> política de privacidad</span>
+												</a>
+											</input>
+
+									</div>
+
+								</div>
+
+								<div class="form-group">
+									<div class="col-md-12 text-center">
+
+										<button class="btn btn-info btn-md" type="submit" id="grabar" value="Salvar">
+											<span class="glyphicon glyphicon-send" aria-hidden="true"></span> Solicitar clave
+										</button>
+									</div>
+								</div>
+
+							</form>
                         </div>
                     </div>
                 </div>

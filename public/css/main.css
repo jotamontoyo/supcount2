@@ -166,11 +166,16 @@ ul.nostyle i {
   height: auto;
   padding: 22px 15px 21px;
 }
+
 #main-menu.navbar-default .navbar-nav > li.active > a, #main-menu.navbar-default .navbar-nav > li.open > a, #main-menu.navbar-default .navbar-nav > li:hover > a {
     background: transparent;
     padding-top: 37px;
     border-top: 3px solid #BE1414;
 }
+
+
+
+
 @media only screen and (min-width: 768px) {
   #main-menu.navbar-default {
     background: rgba(255, 255, 255, 0.9);
@@ -181,13 +186,28 @@ ul.nostyle i {
     padding-top: 40px;
     padding-bottom: 40px;
   }
-  #main-menu.navbar-default .navbar-nav > li.active > a,
+
+
+
+
+  #main-menu .navbar-default .navbar-nav > li > a:active,
+  #main-menu .navbar-default .navbar-nav li a:hover,
+  #main-menu .navbar-default .navbar-nav li a:focus {
+    background: transparent;
+    padding-top: 37px;
+    border-top: 3px solid #BE1414;
+  }
+  /* #main-menu.navbar-default .navbar-nav > li.active > a,
   #main-menu.navbar-default .navbar-nav > li.open > a,
   #main-menu.navbar-default .navbar-nav > li:hover > a {
     background: transparent;
     padding-top: 37px;
     border-top: 3px solid #BE1414;
-  }
+  } */
+
+
+
+
   #main-menu.navbar-default .dropdown-menu {
     padding: 0 20px;
     min-width: 220px;
