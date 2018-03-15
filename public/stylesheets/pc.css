@@ -392,17 +392,30 @@
 
 	}
 
-
-
-
-
-
 	#principal {
 /*		background: url(/images/inicio/06.jpg) no-repeat fixed center; */
 
 		padding: 0px;
 
 	}
+
+
+
+	/* ========== index_principal ================================================ */
+	/* ========== index_principal ================================================ */
+	/* ========== index_principal ================================================ */
+
+
+	#index_principal {
+		padding-top: 100px;
+	}
+
+
+
+
+
+
+
 
 	a:hover {
 		cursor: pointer;
