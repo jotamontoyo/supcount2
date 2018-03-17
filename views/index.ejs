@@ -319,7 +319,7 @@
 
 
 
-
+	<% if (!session.user) {%>
 
 	<div id="login_inicio">
 		<form class="form-horizontal" method='POST' action='/login' id="inicio_form">
@@ -348,7 +348,7 @@
 
 	<header id="header">
         <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
-            <div class="container">
+            <div class="container" id="menu">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
@@ -376,7 +376,7 @@
     </header><!--/header-->
 
 
-
+	<%}%>
 
 
 
@@ -446,9 +446,9 @@
 
 	    	<div class="item">
 	      		<img src="/images/slider/bg2.jpg" alt="...">
-				<div class="carousel-caption">
-					<a class="btn btn-primary animated slideInLeft" href="#">Boton</a>
-					<p class="animated slideInRight">Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem</p>
+				<div class="carousel-caption" style="height: 200px;">
+					<a class="btn btn-primary animated slideInDown" href="#">Boton</a>
+					<p class="animated slideInLeft">Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem</p>
 				</div>
 	    	</div>
 

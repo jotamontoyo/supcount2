@@ -359,19 +359,37 @@
 	/* =================================================================================== */
 
 
-	#menu {
+	.main-header a {
 
-
-
-
+		color: white;
 	}
 
-	#menu li {
 
-
+	#menu-aside {
+		color: #A4A4A4;
+		background-color: #222d32;
 	}
 
-	#menu .sidebar-menu img {
+	#menu-aside .header {
+		background-color: #071918;
+	}
+
+	#menu-aside li a {
+		color: #A4A4A4;
+	}
+
+
+	#menu-aside li a:hover {
+		color: #D8D8D8;
+	}
+
+
+	#menu-aside .sidebar-menu li a {
+		background-color: #222d32;
+	}
+
+
+	#menu-aside .sidebar-menu img {
 
 		width: 16px;
 		/*-webkit-filter: grayscale(100%);
@@ -714,11 +732,10 @@
 
 	.alerta-cookies {													/* etilo aviso cookies */
 		/*max-width: 100%;*/
-		margin-left: 0px;
-		margin-right: 30px;
+		margin-left: -60px;
+		margin-right: 60px;
 		margin-top: 150px;
 		position: fixed;
-
 		z-index: 3;
 		visibility: visible;
 	}
@@ -727,7 +744,6 @@
 	.alerta-panel {
 		color: #FAFAFA;
 		background-image: none;
-/*		background-color: rgba(30, 144, 255, 0.7); */
 		background: rgba(0, 0, 0, 0.7);
 		border: none;
 		border-radius: 0;

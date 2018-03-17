@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100,700,100italic,300italic,400italic,700italic);
+/* @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100,700,100italic,300italic,400italic,700italic); */
 /*
 Template Name: HR2 - Template
 Version: 1.0
@@ -9,14 +9,14 @@ Author URL: http://hostingred.com
 *******Typography******
 **************************/
 body {
-  padding-top: 100px;
-  background: #fff;
-  font-family: 'Roboto', sans-serif;
+  /* padding-top: 100px;
+  background: #fff; */
+  /* font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  color: #64686d;
+  color: #64686d; */
   line-height: 26px;
 }
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -25,8 +25,8 @@ h6 {
   font-weight: 600;
   font-family: 'Roboto', sans-serif;
   color: #272727;
-}
-a {
+} */
+/* a {
   color: #BE1414;
   -webkit-transition: color 400ms, background-color 400ms;
   -moz-transition: color 400ms, background-color 400ms;
@@ -37,7 +37,7 @@ a:hover,
 a:focus {
   text-decoration: none;
   color: #A00303;
-}
+} */
 hr {
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #fff;
@@ -85,7 +85,7 @@ hr {
   border-radius: 20px;
   background: #BE1414;
 }
-.btn {
+/* .btn {
   border-width: 0;
   border-bottom-width: 3px;
   border-radius: 3px;
@@ -97,7 +97,7 @@ hr {
 .btn.btn-primary:hover,
 .btn.btn-primary:focus {
   background: #A00303;
-}
+} */
 .column-title {
   margin-top: 0;
   padding-bottom: 15px;
@@ -154,7 +154,7 @@ ul.nostyle i {
 /*************************
 *******Header******
 **************************/
-.navbar.navbar-default {
+/* .navbar.navbar-default {
   border: 0;
   border-radius: 0;
   margin-bottom: 0;
@@ -165,7 +165,7 @@ ul.nostyle i {
 .navbar.navbar-default .navbar-brand {
   height: auto;
   padding: 22px 15px 21px;
-}
+} */
 
 #main-menu.navbar-default .navbar-nav > li.active > a, #main-menu.navbar-default .navbar-nav > li.open > a, #main-menu.navbar-default .navbar-nav > li:hover > a {
     background: transparent;
