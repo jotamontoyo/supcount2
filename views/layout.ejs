@@ -427,6 +427,56 @@
 	</div>
 
 
+	<!-- MODAL login ===================================================================================== -->
+	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="inicio" aria-hidden="true" style="padding-left: 0px">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<div class="modal-header text-center">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h2>SupCounter<span style="font-size: 15px;">&copy;</span></h2>
+
+				</div>
+
+				<div class="modal-body">
+
+					<div class="panel" id="login-panel">
+
+						<form class="form-horizontal" method='POST' action='/login'>
+
+							<div class="form-group">
+
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user"></i></span><input class="form-control" type="text" id="login" name="login"  placeholder="usuario"/>
+								</div>
+
+								<br>
+
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-key"></i></span><input class="form-control" type="password" id="password" name="password" placeholder="clave"/>
+								</div>
+
+								<br>
+
+								<div class="text-center">
+									<button class="btn btn-default btn-sm" type="submit"><i class="fa fa-check"></i> Entrar</button>
+								</div>
+
+							</div>
+
+						</form>
+
+					</div>
+				</div>
+
+<!--					<a id="acceso" href="/login"><img src="/images/user2.png" alt=""> Login&nbsp;</a> -->
+				<div class="modal-footer">
+					<button type="button" class="btn btn-outline pull-right" data-dismiss="modal">Cerrar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 
 
 	<!-- MODAL ver mas ===================================================================================== -->

@@ -24,7 +24,8 @@
 
     .ocultar_movil {
 
-        visibility: hidden;
+        /* visibility: hidden; */
+        display: none;
 
     }
 
@@ -52,9 +53,17 @@
     }
 
 
-    /* INICIO =============================================================== */
+    /* index.html =============================================================== */
 
-    #inicio {
+
+    #index_principal {
+
+        padding-top: 0px;
+    }
+
+
+
+    /* #inicio {
 
         min-height: 360px;
 
@@ -75,20 +84,20 @@
     #inicio h3 {
 
         font-size: 18px;
-    }
+    } */
 
 
-
-    #login_inicio {								/* login de la pantalla de inicio */
+    /* login de la pantalla de inicio */
+    /* #login_inicio {
         margin-top: -60px;
         z-index: 10;
-        
+
 	}
 
     #login_inicio form {
         margin-left: auto;
         margin-right: auto;
-    }
+    } */
 
 
 

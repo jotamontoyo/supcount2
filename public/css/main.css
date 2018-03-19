@@ -168,15 +168,27 @@ ul.nostyle i {
 } */
 
 #main-menu.navbar-default .navbar-nav > li.active > a, #main-menu.navbar-default .navbar-nav > li.open > a, #main-menu.navbar-default .navbar-nav > li:hover > a {
-    background: transparent;
-    padding-top: 37px;
-    border-top: 3px solid #BE1414;
+    /* background: transparent; */
+    /* padding-top: 37px; */
+    /* border-bottom: 1px solid #BE1414; */
 }
 
 
 
 
 @media only screen and (min-width: 768px) {
+
+
+
+    #main-menu.navbar-default .navbar-nav > li.active > a, #main-menu.navbar-default .navbar-nav > li.open > a, #main-menu.navbar-default .navbar-nav > li:hover > a {
+        background: transparent;
+        padding-top: 37px;
+        border-top: 3px solid #BE1414;
+        border-bottom: none;
+    }
+
+
+
   #main-menu.navbar-default {
     background: rgba(255, 255, 255, 0.9);
     -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);

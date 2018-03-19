@@ -585,31 +585,45 @@
 
 	#login {
 
+		background-color: rgba(0, 0, 0, 0.8);
+
+
+	}
 
 
 
+	.modal-header, .modal-footer, .modal-content, .modal-body {
+		/* color: #BDBDBD; */
+		border: none;
+		background-color: rgba(216, 216 , 216, 0.6);
 	}
 
 
 
 	#login-panel {
 
-		max-width: 600px;
-		margin-top: 20vh;
+		max-width: 200px;
+		/* margin-top: 20vh; */
 		margin-right: auto;
 		margin-left: auto;
-		padding-top: 10vh;
-		padding-bottom: 10vh;
-		border: 		1px solid #D8D8D8;
+		/* padding-top: 10vh; */
+		/* padding-bottom: 10vh; */
+
+		background-color: transparent;
+
+
+		/* border: 		1px solid #D8D8D8; */
 
 	}
 
 
-	#login-panel .input-group {
+	#login-panel .input-group input {
 
-		margin-left: auto;
-		margin-right: auto;
-		max-width: 260px;
+		background-color: rgba(216, 216 , 216, 0.8);
+
+		/* margin-left: auto;
+		margin-right: auto; */
+		/* max-width: 260px; */
 
 	}
 
@@ -776,9 +790,9 @@
 
 	#login_inicio {								/* login de la pantalla de inicio */
 
-		width: 100%;
-		position: absolute;
-		top: 120px;
+		/* width: 100%; */
+		position: relative;
+		/* top: 120px; */
 		z-index: 5;
 	}
 
@@ -786,12 +800,12 @@
 
 
 	#inicio_form {								/* form de login */
-		margin-right: 250px;
+		/* margin-right: 250px; */
 		float: right;
 	}
 
 	#inicio_form input {
-		max-width: 150px;
+		max-width: 100px;
 		height: 22px;
 		padding-left: 0px;
 		font-size: 12px;
@@ -799,7 +813,7 @@
 
 
 	.input-login-incio {
-		max-width: 150px;
+		max-width: 100px;
 		padding-left: 5px;
 		padding-right: 0px;
 		text-align: left;
