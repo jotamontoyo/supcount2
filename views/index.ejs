@@ -362,7 +362,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"><img src="/favicon.ico" alt="logo"></a>
+                    <!-- <a class="navbar-brand" href="#"><img src="/favicon.ico" alt="logo"></a> -->
                 </div>
 
                 <div class="collapse navbar-collapse navbar-right">
@@ -370,9 +370,9 @@
                         <li class="scroll active"><a href="#index_principal">Inicio</a></li>
                         <li class="scroll"><a href="#features">Nuestros Productos</a></li>
                         <li class="scroll"><a href="#services">Servicios</a></li>
-                        <li class="scroll"><a href="#portfolio">Portafolio</a></li>
+                        <!-- <li class="scroll"><a href="#portfolio">Portafolio</a></li> -->
                         <li class="scroll"><a href="#about">Acerca de</a></li>
-                        <li class="scroll"><a href="#meet-team">Equipo</a></li>
+                        <!-- <li class="scroll"><a href="#meet-team">Equipo</a></li> -->
                         <li class="scroll"><a href="#pricing">Tarifas</a></li>
                         <!-- <li class="scroll"><a href="#get-in-touch">Contacto</a></li> -->
 
@@ -454,9 +454,6 @@
 	    	</div>
 
 
-
-
-
 	    	<div class="item">
 	      		<img src="/images/slider/bg2.jpg" alt="...">
 				<div class="carousel-caption" style="height: 200px;">
@@ -501,7 +498,11 @@
                     <p>Rediseño del index principal.</p>
                 </div>
                 <div class="col-sm-3 text-right">
-                    <a class="btn btn-primary btn-lg" href="#">Reprehenderit Qui!</a>
+					<button class="btn btn-primary"
+						data-toggle="modal"
+						data-target="#ver-mas-modal">
+							<i class="fa fa-plus"></i> Info
+					</button>
                 </div>
             </div>
         </div>
@@ -517,7 +518,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-6 wow fadeInLeft">
-                    <img class="img-responsive" src="images/index/main-feature.png" alt="">
+                    <img class="img-responsive" src="/images/index/main-feature.png" alt="">
                 </div>
                 <div class="col-sm-6">
                     <div class="media service-box wow fadeInRight">
@@ -567,9 +568,15 @@
     <section id="cta2">
         <div class="container">
             <div class="text-center">
-                <h2 class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">YOUR COMPANY <span>SED UT PERSPICIATIS UNDE OMNIS</span></h2>
-                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo<br>inventore veritatis et quasi architecto beatae.</p>
-                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms"><a class="btn btn-primary btn-lg" href="#">Voluptatem Quia</a></p>
+                <h2 class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">SU EMPRESA <span>AUMENTARÁ SUS BENEFICIOS</span></h2>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">al mismo tiempo que crecerá en control<br>al tener disponible los resultados.</p>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
+					<button class="btn btn-primary"
+						data-toggle="modal"
+						data-target="#ver-mas-modal">
+							<i class="fa fa-plus"></i> Info
+					</button>
+				</p>
             </div>
         </div>
     </section>
@@ -578,8 +585,8 @@
         <div class="container">
 
             <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown">Service</h2>
-                <p class="text-center wow fadeInDown"> Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,<br>adipisci velit, sed quia non numquam eius modi tempora incidunt ut </p>
+                <h2 class="section-title text-center wow fadeInDown">Servicios</h2>
+                <p class="text-center wow fadeInDown">Ofrecemos servicios de control de resultados<br>para que su empresa sea sólida.</p>
             </div>
 
             <div class="row">
@@ -590,8 +597,8 @@
                                 <i class="fa fa-key"></i>
                             </div>
                             <div class="media-body">
-                                <h4 class="media-heading">Ut Enim</h4>
-                                <p>Minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex commodi</p>
+                                <h4 class="media-heading">Seguridad</h4>
+                                <p>Sus datos estarán siempre seguros.</p>
                             </div>
                         </div>
                     </div><!--/.col-md-4-->
@@ -602,8 +609,8 @@
                                 <i class="fa fa-lock"></i>
                             </div>
                             <div class="media-body">
-                                <h4 class="media-heading">Quis Autem</h4>
-                                <p>Reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum</p>
+                                <h4 class="media-heading">Protección</h4>
+                                <p>Alojamiento cifrado para preservar su integridad.</p>
                             </div>
                         </div>
                     </div><!--/.col-md-4-->
@@ -614,8 +621,8 @@
                                 <i class="fa fa-power-off"></i>
                             </div>
                             <div class="media-body">
-                                <h4 class="media-heading"> At Vero Eos</h4>
-                                <p>Accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti</p>
+                                <h4 class="media-heading">Siempre disponible</h4>
+                                <p>Acceda cada vez que lo necesite, desde cualquier lugar.</p>
                             </div>
                         </div>
                     </div><!--/.col-md-4-->
@@ -626,8 +633,8 @@
                                 <i class="fa fa-recycle"></i>
                             </div>
                             <div class="media-body">
-                                <h4 class="media-heading">Excepturi Sint</h4>
-                                <p>Occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est</p>
+                                <h4 class="media-heading">Dinámico</h4>
+                                <p>Obtenga rapidez en el proceso.</p>
                             </div>
                         </div>
                     </div><!--/.col-md-4-->
@@ -638,8 +645,8 @@
                                 <i class="fa fa-history"></i>
                             </div>
                             <div class="media-body">
-                                <h4 class="media-heading">Harum Quidem</h4>
-                                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime</p>
+                                <h4 class="media-heading">Recupere el tiempo</h4>
+                                <p>Y reinviertalo en procesos más productivos.</p>
                             </div>
                         </div>
                     </div><!--/.col-md-4-->
@@ -650,8 +657,8 @@
                                 <i class="fa fa-magic"></i>
                             </div>
                             <div class="media-body">
-                                <h4 class="media-heading">Placeat Facere</h4>
-                                <p>Omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis</p>
+                                <h4 class="media-heading">Sorpréndase</h4>
+                                <p>En su primer contacto con la aplicación.</p>
                             </div>
                         </div>
                     </div><!--/.col-md-4-->
@@ -660,7 +667,7 @@
         </div><!--/.container-->
     </section><!--/#services-->
 
-    <section id="portfolio">
+    <!-- <section id="portfolio">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title text-center wow fadeInDown">Portfolio</h2>
@@ -673,7 +680,7 @@
                     <li><a href="#" data-filter=".filter1">Voluptatem</a></li>
                     <li><a href="#" data-filter=".filter2">Aperiam</a></li>
                     <li><a href="#" data-filter=".filter3">Inventore</a></li>
-                </ul><!--/#portfolio-filter-->
+                </ul>
             </div>
 
             <div class="portfolio-items">
@@ -686,7 +693,7 @@
                             <a class="preview" href="images/index/portfolio/01.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
                         </div>
                     </div>
-                </div><!--/.portfolio-item-->
+                </div>
 
                 <div class="portfolio-item filter2 filter3">
                     <div class="portfolio-item-inner">
@@ -697,7 +704,7 @@
                             <a class="preview" href="images/index/portfolio/02.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
                         </div>
                     </div>
-                </div><!--/.portfolio-item-->
+                </div>
 
                 <div class="portfolio-item filter1">
                     <div class="portfolio-item-inner">
@@ -708,7 +715,7 @@
                             <a class="preview" href="images/index/portfolio/03.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
                         </div>
                     </div>
-                </div><!--/.portfolio-item-->
+                </div>
 
                 <div class="portfolio-item filter2">
                     <div class="portfolio-item-inner">
@@ -719,7 +726,7 @@
                             <a class="preview" href="images/index/portfolio/04.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
                         </div>
                     </div>
-                </div><!--/.portfolio-item-->
+                </div>
 
                 <div class="portfolio-item filter1 filter3">
                     <div class="portfolio-item-inner">
@@ -730,7 +737,7 @@
                             <a class="preview" href="images/index/portfolio/05.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
                         </div>
                     </div>
-                </div><!--/.portfolio-item-->
+                </div>
 
                 <div class="portfolio-item filter2">
                     <div class="portfolio-item-inner">
@@ -741,7 +748,7 @@
                             <a class="preview" href="images/index/portfolio/06.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
                         </div>
                     </div>
-                </div><!--/.portfolio-item-->
+                </div>
 
                 <div class="portfolio-item filter1 filter3">
                     <div class="portfolio-item-inner">
@@ -752,7 +759,7 @@
                             <a class="preview" href="images/index/portfolio/07.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
                         </div>
                     </div>
-                </div><!--/.portfolio-item-->
+                </div>
 
                 <div class="portfolio-item filter2">
                     <div class="portfolio-item-inner">
@@ -763,35 +770,58 @@
                             <a class="preview" href="images/index/portfolio/08.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
                         </div>
                     </div>
-                </div><!--/.portfolio-item-->
+                </div>
             </div>
-        </div><!--/.container-->
-    </section><!--/#portfolio-->
+        </div>
+    </section> -->
+
+
+
+	<section id="cta" class="wow fadeIn">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+					<h1>Registros de Mantemiento<span style="font-size: 18px"> &copy;</span></h1>
+                    <h2>Estamos trabajado en una mejor experiencia para el usuario.</h2>
+                    <p>Rediseño del index principal.</p>
+                </div>
+                <div class="col-sm-3 text-right">
+					<button class="btn btn-primary"
+						data-toggle="modal"
+						data-target="#ver-mas-modal">
+							<i class="fa fa-plus"></i> Info
+					</button>
+                </div>
+            </div>
+        </div>
+    </section><!--/#cta-->
+
+
 
     <section id="about">
         <div class="container">
 
             <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown">About Us</h2>
-                <p class="text-center wow fadeInDown">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis<br>praesentium voluptatum deleniti atque corrupti quos dolores et quas</p>
+                <h2 class="section-title text-center wow fadeInDown">Nosotros</h2>
+                <p class="text-center wow fadeInDown">Nos gusta trabajar en últimas tecnologías<br>y actualizarnos con cada oportunidad.</p>
             </div>
 
             <div class="row">
                 <div class="col-sm-6 wow fadeInLeft">
-                    <h3 class="column-title">Video Sample</h3>
+                    <h3 class="column-title">Video de ejemplo</h3>
                     <!-- 16:9 aspect ratio -->
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe src="https://www.youtube.com/embed/XH7OShyZ1Ek" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <!-- <iframe src="https://www.youtube.com/embed/XH7OShyZ1Ek" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
                     </div>
                 </div>
 
                 <div class="col-sm-6 wow fadeInRight">
-                    <h3 class="column-title">Officia Deserunt</h3>
-                    <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum.</p>
+                    <h3 class="column-title">Experiencia en procesos</h3>
+                    <p>Los años de trabajo nos han permitido depurar los procesos. Sabemos cuáles son las necesidades de su empresa porque nuestros desarrollos se han producido en el ámbito de trabajo.</p>
 
-                    <p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+                    <p>Estamos seguros de que esta aplicación satifará sus necesidades, y por ello le invitamos a hacer una simulación gratuita.</p>
 
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-sm-6">
                             <ul class="nostyle">
                                 <li><i class="fa fa-check-square"></i> Eaque ipsa quae ab</li>
@@ -805,9 +835,14 @@
                                 <li><i class="fa fa-check-square"></i> Nemo enim ipsam</li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <a class="btn btn-primary" href="#">Consequuntur magni</a>
+
+					<button class="btn btn-primary"
+						data-toggle="modal"
+						data-target="#ver-mas-modal">
+							<i class="fa fa-plus"></i> Info
+					</button>
 
                 </div>
             </div>
@@ -817,54 +852,58 @@
     <section id="work-process">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown">Sit amet, Consectetur, Edipisci Velit</h2>
-                <p class="text-center wow fadeInDown">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit<br>laboriosam, nisi ut aliquid ex ea commodi consequatur?<br>Quis autem vel eum iure reprehenderit</p>
+                <h2 class="section-title text-center wow fadeInDown">Configure, Procese, Analice</h2>
+                <p class="text-center wow fadeInDown">
+					Dé de alta los contadores<br>
+					Procese las lecturas<br>
+					Analice los resultados
+				</p>
             </div>
 
             <div class="row text-center">
-                <div class="col-md-2 col-md-4 col-xs-6">
+                <div class="col-md-3 col-md-4 col-xs-6">
                     <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms">
                         <div class="icon-circle">
                             <span>1</span>
                             <i class="fa fa-area-chart fa-2x"></i>
                         </div>
-                        <h3>VELIT</h3>
+                        <h3>Hoteles</h3>
                     </div>
                 </div>
-                <div class="col-md-2 col-md-4 col-xs-6">
+                <div class="col-md-3 col-md-4 col-xs-6">
                     <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="100ms">
                         <div class="icon-circle">
                             <span>2</span>
                             <i class="fa fa-binoculars fa-2x"></i>
                         </div>
-                        <h3>QUAM</h3>
+                        <h3>Campos de golf</h3>
                     </div>
                 </div>
-                <div class="col-md-2 col-md-4 col-xs-6">
+                <div class="col-md-3 col-md-4 col-xs-6">
                     <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="200ms">
                         <div class="icon-circle">
                             <span>3</span>
                             <i class="fa fa-coffee fa-2x"></i>
                         </div>
-                        <h3>MOLESTIAE</h3>
+                        <h3>Centros comerciales</h3>
                     </div>
                 </div>
-                <div class="col-md-2 col-md-4 col-xs-6">
+                <div class="col-md-3 col-md-4 col-xs-6">
                     <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="300ms">
                         <div class="icon-circle">
                             <span>4</span>
                             <i class="fa fa-bullhorn fa-2x"></i>
                         </div>
-                        <h3>EXPEDITA</h3>
+                        <h3>Multipropiedades</h3>
                     </div>
                 </div>
-                <div class="col-md-2 col-md-4 col-xs-6">
+                <!-- <div class="col-md-2 col-md-4 col-xs-6">
                     <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="400ms">
                         <div class="icon-circle">
                             <span>5</span>
                             <i class="fa fa-certificate fa-2x"></i>
                         </div>
-                        <h3>FUGIAT</h3>
+                        <h3>Centros polideportivos</h3>
                     </div>
                 </div>
                 <div class="col-md-2 col-md-4 col-xs-6">
@@ -873,14 +912,14 @@
                             <span>6</span>
                             <i class="fa fa-cogs fa-2x"></i>
                         </div>
-                        <h3>LAUNCH</h3>
+                        <h3>Residenciales</h3>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section><!--/#work-process-->
 
-    <section id="meet-team">
+    <!-- <section id="meet-team">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title text-center wow fadeInDown">OUR TEAM</h2>
@@ -1074,9 +1113,9 @@
 
             </div>
         </div>
-    </section><!--/#meet-team-->
+    </section> -->
 
-    <section id="animated-number">
+    <!-- <section id="animated-number">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title text-center wow fadeInDown">Impedit Quo Minus</h2>
@@ -1110,13 +1149,13 @@
                 </div>
             </div>
         </div>
-    </section><!--/#animated-number-->
+    </section>  -->
 
     <section id="pricing">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown">Our Plans</h2>
-                <p class="text-center wow fadeInDown"> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque<br>laudantium, totam rem aperiam, eaque ipsa quae ab illo</p>
+                <h2 class="section-title text-center wow fadeInDown">Tarifas</h2>
+                <p class="text-center wow fadeInDown"> Estos son planes estándar,<br>para cualquier otra configuración póngase en contacto con nosotros.</p>
             </div>
 
             <div class="row">
@@ -1126,24 +1165,24 @@
                             <li class="plan-header">
                                 <div class="price-duration">
                                     <span class="price">
-                                        $15
+                                        5€
                                     </span>
                                     <span class="duration">
-                                        per year
+                                        al mes
                                     </span>
                                 </div>
 
                                 <div class="plan-name">
-                                    Plan One
+                                    Plan 1
                                 </div>
                             </li>
-                            <li><strong>10</strong> EXCEPTURL</li>
-                            <li><strong>120</strong> NIHIL</li>
-                            <li><strong>EXPEDITA</strong> DISCTINTO</li>
-                            <li>LUSTO ODIMO ATQUE</li>
+                            <li><strong>5</strong> Contadores</li>
+                            <li><strong>2</strong> Piscinas</li>
+                            <li><strong>2</strong> Usuarios</li>
+                            <!-- <li>LUSTO ODIMO ATQUE</li>
                             <li><strong>15</strong> RATIONE COLUPTATEM</li>
-                            <li><strong>24/7</strong> SAPIENTE</li>
-                            <li class="plan-purchase"><a class="btn btn-primary" href="#">GET NOW</a></li>
+                            <li><strong>24/7</strong> SAPIENTE</li> -->
+                            <li class="plan-purchase"><a class="btn btn-primary" href="#get-in-touch">Registrarse</a></li>
                         </ul>
                     </div>
                 </div>
@@ -1153,24 +1192,24 @@
                             <li class="plan-header">
                                 <div class="price-duration">
                                     <span class="price">
-                                        $28
+                                        10€
                                     </span>
                                     <span class="duration">
-                                        per year
+                                        al mes
                                     </span>
                                 </div>
 
                                 <div class="plan-name">
-                                    Plan Two
+                                    Plan 2
                                 </div>
                             </li>
-                            <li><strong>10</strong> EXCEPTURL</li>
-                            <li><strong>120</strong> NIHIL</li>
-                            <li><strong>EXPEDITA</strong> DISCTINTO</li>
-                            <li>LUSTO ODIMO ATQUE</li>
+                            <li><strong>10</strong> Contadores</li>
+                            <li><strong>4</strong> Piscinas</li>
+                            <li><strong>3</strong> Usuarios</li>
+                            <!-- <li>LUSTO ODIMO ATQUE</li>
                             <li><strong>15</strong> RATIONE COLUPTATEM</li>
-                            <li><strong>24/7</strong> SAPIENTE</li>
-                            <li class="plan-purchase"><a class="btn btn-primary" href="#">GET NOW</a></li>
+                            <li><strong>24/7</strong> SAPIENTE</li> -->
+                            <li class="plan-purchase"><a class="btn btn-primary" href="#get-in-touch">Registrarse</a></li>
                         </ul>
                     </div>
                 </div>
@@ -1180,24 +1219,24 @@
                             <li class="plan-header">
                                 <div class="price-duration">
                                     <span class="price">
-                                        $40
+                                        15€
                                     </span>
                                     <span class="duration">
-                                        per year
+                                        al mes
                                     </span>
                                 </div>
 
                                 <div class="plan-name">
-                                    Plan Three
+                                    Plan 3
                                 </div>
                             </li>
-                            <li><strong>10</strong> EXCEPTURL</li>
-                            <li><strong>120</strong> NIHIL</li>
-                            <li><strong>EXPEDITA</strong> DISCTINTO</li>
-                            <li>LUSTO ODIMO ATQUE</li>
+                            <li><strong>15</strong> Contadores</li>
+                            <li><strong>6</strong> Pisicinas</li>
+                            <li><strong>4</strong> Usuarios</li>
+                            <!-- <li>LUSTO ODIMO ATQUE</li>
                             <li><strong>15</strong> RATIONE COLUPTATEM</li>
-                            <li><strong>24/7</strong> SAPIENTE</li>
-                            <li class="plan-purchase"><a class="btn btn-primary" href="#">GET NOW</a></li>
+                            <li><strong>24/7</strong> SAPIENTE</li> -->
+                            <li class="plan-purchase"><a class="btn btn-primary" href="#get-in-touch">Registrarse</a></li>
                         </ul>
                     </div>
                 </div>
@@ -1207,24 +1246,24 @@
                             <li class="plan-header">
                                 <div class="price-duration">
                                     <span class="price">
-                                        $58
+                                        25€
                                     </span>
                                     <span class="duration">
-                                        per year
+                                        al mes
                                     </span>
                                 </div>
 
                                 <div class="plan-name">
-                                    Plan Four
+                                    Plan 4
                                 </div>
                             </li>
-                            <li><strong>10</strong> EXCEPTURL</li>
-                            <li><strong>120</strong> NIHIL</li>
-                            <li><strong>EXPEDITA</strong> DISCTINTO</li>
-                            <li>LUSTO ODIMO ATQUE</li>
+                            <li><strong>Más de 15</strong> Contadores</li>
+                            <li><strong>Más de 6</strong> Pisicinas</li>
+                            <li><strong>Más de 4</strong> Usuarios</li>
+                            <!-- <li>LUSTO ODIMO ATQUE</li>
                             <li><strong>15</strong> RATIONE COLUPTATEM</li>
-                            <li><strong>24/7</strong> SAPIENTE</li>
-                            <li class="plan-purchase"><a class="btn btn-primary" href="#">GET NOW</a></li>
+                            <li><strong>24/7</strong> SAPIENTE</li> -->
+                            <li class="plan-purchase"><a class="btn btn-primary" href="#get-in-touch">Registrarse</a></li>
                         </ul>
                     </div>
                 </div>
@@ -1232,7 +1271,7 @@
         </div>
     </section><!--/#pricing-->
 
-    <section id="testimonial">
+    <!-- <section id="testimonial">
         <div class="container">
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2">
@@ -1269,13 +1308,13 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section id="get-in-touch">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown">NOSTRUM ALIQUAM INCIDUNT</h2>
-                <p class="text-center wow fadeInDown">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia<br>consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt</p>
+                <h2 class="section-title text-center wow fadeInDown">NOSOTROS LO DEMOSTRAMOS</h2>
+                <p class="text-center wow fadeInDown">Rellene el sencillo formulario de abajo<br>y en breve recibirá un usuario y clave de acceso temporal para que lo compruebe.</p>
             </div>
         </div>
     </section><!--/#get-in-touch-->
