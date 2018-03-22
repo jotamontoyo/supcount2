@@ -125,6 +125,9 @@
 
 
 
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+
 </head>
 
 
@@ -301,7 +304,7 @@
 			            	</a>
 			          	</li>
 
-						<li><a href="/logout"><i class="fa fa-circle-o text-red"></i> <span> Salir</span></a></li>
+						<li><a href="/logout"><i class="fa fa-power-off text-red"></i> <span> Salir</span></a></li>
 
 					</ul>
 
@@ -351,7 +354,7 @@
 
 
 		<footer class="main-footer text-center">
-		    <h6>&copy; 2017 cosilsCompany, Inc.
+		    <h6>&copy; 2018 cosilsCompany, Inc.
 				&nbsp;
 				&middot;
 				&nbsp;
@@ -422,10 +425,11 @@
 
 
 	<!-- BOTON SUBIR =================================================================================== -->
-
-	<div class="row center-block animated fadeIn" id="subir-inicio">
-		<nav role="navigation"><a href="#principal"><i class="fa fa-arrow-circle-up fa-2x" id="subir-inicio-icon"></i></a></nav>
-	</div>
+	<% if (session.user) {%>
+		<div class="row center-block animated fadeIn" id="subir-inicio">
+			<nav role="navigation"><a href="#principal"><i class="fa fa-arrow-circle-up fa-2x" id="subir-inicio-icon"></i></a></nav>
+		</div>
+	<%}%>
 
 
 	<!-- MODAL login ===================================================================================== -->
