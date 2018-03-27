@@ -425,10 +425,14 @@
 
 
 	#index_principal {
+		position: relative;
 		padding-top: 100px;
 	}
 
-
+	#index_principal section {
+		/* border-top: 	2px inset black; */
+		border-bottom: 	2px groove #c6c7cc;
+	}
 
 
 

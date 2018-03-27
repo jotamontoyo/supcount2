@@ -190,13 +190,15 @@ ul.nostyle i {
 
 
   #main-menu.navbar-default {
-    background: rgba(255, 255, 255, 0.9);
+
+    /* background: rgba(0, 0, 0, 0.8); */
     -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
   }
   #main-menu.navbar-default .navbar-nav > li > a {
     padding-top: 40px;
     padding-bottom: 40px;
+    /* color: #b8c7ce; */
   }
 
 
@@ -364,7 +366,9 @@ ul.nostyle i {
   margin-top: 80px;
 }
 #services {
-  padding: 100px 0 75px;
+    height: 100vh;
+    min-height: 600px;
+    padding: 140px 0 75px;
 }
 .media.service-box {
   margin: 25px 0;
@@ -572,7 +576,9 @@ ul.nostyle i {
   margin-top: 10px;
 }
 #about {
-  padding: 100px 0;
+    height: 100vh;
+    min-height: 600px;
+    padding: 140px 0;
 }
 #work-process {
   padding: 100px 0 50px;
@@ -919,6 +925,10 @@ ul.nostyle i {
 #blog .blog-post .entry-meta > span > a:hover {
   color: #BE1414;
 }
+
+
+
+
 #contact {
   position: relative;
   overflow: hidden;
@@ -935,11 +945,16 @@ ul.nostyle i {
 #contact .contact-form {
   background: rgba(255, 255, 255, 0.8);
   padding: 20px;
-  margin-top: 50px;
+  margin-top: 120px;
 }
 #contact .contact-form h3 {
   margin-top: 0;
 }
+
+
+
+
+
 /***********************
 ********* Footer ******
 ************************/

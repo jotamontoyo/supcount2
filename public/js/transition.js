@@ -31,7 +31,7 @@
 		    	id = $el.attr('id');
             $('.btn-navbar').click();
             $('.navbar-toggle').click();
-			
+
 		});
 
 
