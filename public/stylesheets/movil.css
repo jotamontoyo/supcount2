@@ -9,6 +9,13 @@
 
 @media handheld, only screen and (max-width: 767px) {			/* movil */
 
+    #services, #about, #pricing {
+        height: auto;
+        min-height: 1px;
+        padding: 0px;
+        position: relative;
+    }
+
 
     .avisos {
         margin-left: 10px;

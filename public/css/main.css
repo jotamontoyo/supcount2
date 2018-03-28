@@ -175,9 +175,15 @@ ul.nostyle i {
 
 
 
+    #services, #about, #pricing {    /*  nofunciona  */
+        height: auto;
+        min-height: 1px;
+        padding: 0;
+        position: relative;
+    }
+
 
 @media only screen and (min-width: 768px) {
-
 
 
     #main-menu.navbar-default .navbar-nav > li.active > a, #main-menu.navbar-default .navbar-nav > li.open > a, #main-menu.navbar-default .navbar-nav > li:hover > a {
@@ -366,8 +372,8 @@ ul.nostyle i {
   margin-top: 80px;
 }
 #services {
-    height: 100vh;
-    min-height: 600px;
+    /* height: 100vh; */
+    min-height: 100vh;
     padding: 140px 0 75px;
 }
 .media.service-box {
@@ -576,8 +582,8 @@ ul.nostyle i {
   margin-top: 10px;
 }
 #about {
-    height: 100vh;
-    min-height: 600px;
+    /* height: 100vh; */
+    min-height: 100vh;
     padding: 140px 0;
 }
 #work-process {
@@ -746,7 +752,8 @@ ul.nostyle i {
   margin-bottom: 20px;
 }
 #pricing {
-  padding: 100px 0 70px;
+    min-height: 100vh;
+    padding: 100px 0 70px;
 }
 #pricing ul.pricing {
   list-style: none;
