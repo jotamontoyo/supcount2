@@ -160,7 +160,7 @@
 		            from: 'noreply@registrosdemantenimiento.com',	 		               	            // sender address
 		            to: contacto.email, 							// list of receivers
 		            // subject: req.body.subject, 								// Subject line
-		            text: 'Nueva solicitud de soporte.', 								// plain text body
+		            text: 'Nueva solicitud de contacto.', 								// plain text body
 		            html: contacto.comentario
 		        };
 
