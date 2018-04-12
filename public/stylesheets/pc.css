@@ -437,6 +437,91 @@
 
 
 
+	/* ========== carousel ================================================ */
+
+	#carousel h1, #carousel h4, #carousel h5 {
+		color: rgb(147, 112, 219);
+	}
+
+	#carousel .carousel-indicators li {
+		background-color: rgb(147, 112, 219);
+	}
+
+	.contenido_item {
+		/* max-width: 1200px; */
+		height: 550px;
+		padding: 100px;
+	}
+
+	.contenido_item img {
+		min-width: 400px;
+		padding: 50px;
+	}
+
+	.contenido_item button {
+		background-color: rgba(147, 112, 219, 1);
+	}
+
+	.contenido_item button:hover {
+		background-color: rgba(147, 112, 219, 0.8);
+	}
+
+
+	.contenido_item .btn-primary {
+
+	    border-color: transparent;
+	}
+
+	.contenido_item .navbar-collapse, .contenido_item .navbar-collapse a {
+		margin-top: 10px;
+		padding: 0px;
+		color: rgba(147, 112, 219, 1);
+	}
+
+	/* .contenido_item .navbar-collapse a {
+		padding: 0;
+	} */
+
+	.contenido_item .navbar-collapse a:hover {
+		background-color: transparent;
+		color: rgba(147, 112, 219, 0.8);
+	}
+
+
+
+
+
+
+
+	/* ******************* tarifas ************************************************************** */
+
+	#pricing .navbar-nav {				/* boton de cada plan */
+
+		margin-left: 30px;
+	}
+
+
+
+
+
+	#contact .panel {
+		border: 0px;
+		border-radius: 0px;
+	}
+
+
+	#contact .panel-primary {
+		border-color: transparent;
+	}
+
+	#contact .panel-heading {
+		border-top-left-radius: 0px;
+		border-top-right-radius: 0px;
+
+	}
+
+
+
 
 
 	a:hover {
@@ -464,9 +549,19 @@
 	}
 
 	.centrado-v {
+
 		display: flex;							/* necesario para alineacion */
+		justify-content: center;
 		align-items: center; 					/* alineacion vertical */
 	}
+
+
+
+
+
+
+
+
 
 
 
@@ -672,7 +767,7 @@
 
 
 		/*max-height: 70vh;*/
-		min-height: 100vh;
+		min-height: 550px;
 		padding: 0px;
 
 		color: #FAFAFA;
@@ -1466,7 +1561,7 @@
 
 
 
-	/* ========= FORMULARIO CONTADOR PARTE USUARIO CENTRO SILOE===================== */
+	/* ========= FORMULARIOS CONTADOR PARTE USUARIO CENTRO SILOE===================== */
 
 	#contador_form, #criterio_form, #parte_form, #user_form, #centro_form, #vaso_form, #siloe_form  {
 		max-width: 600px;

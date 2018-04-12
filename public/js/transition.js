@@ -52,14 +52,4 @@
 
 
 
-        // if (($(window).scrollTop() === 0) && ($(window).width() > 768)) {               // control aspecto menu-inicio
-        //     $('#main-menu, #menu').css('height', '70px');
-        //     $('.main-menu-item').css('padding-top', '20px');
-        // } else {
-        //     if ($(window).width() > 768) {
-        //         $('#main-menu, #menu').css('height', '50px');
-        //         $('.main-menu-item').css('padding-top', '12px');
-        //     }
-        // }
-
     });
