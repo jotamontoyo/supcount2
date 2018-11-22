@@ -1,6 +1,6 @@
 
 	// process.env.DATABASE_URL = "mysql://supcounter_user:42!s1zZe@vcloud.mysql.sumamoos.com:3306/supcounter_db"; // URL registrosdemantenimiento.com
-    process.env.DATABASE_URL = "postgres://cbmfnzgvxugrpu:4347fd4096016c66e1eab26fd5a23fb004e6a586ae5450e35f52443355076848@ec2-54-75-231-3.eu-west-1.compute.amazonaws.com:5432/dbuj6a22s3juv1"
+    process.env.DATABASE_URL = "postgres://shqqwisrsordbq:fc11a8a5e6fd1da7fe601c78fce48ff38bdc8a93eeff4ca9786cd1cce46f7f92@ec2-54-75-231-3.eu-west-1.compute.amazonaws.com:5432/d9gaaidl15ibf6"
     // process.env.DATABASE_URL = "sqlite://:@:/";           // activar para local
     process.env.DATABASE_STORAGE = "quiz.sqlite";
 	process.env.PASSWORD_ENCRYPTION_KEY= "asdfghjklzxcvbnmqwertyuiop";
